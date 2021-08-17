@@ -1,0 +1,153 @@
+2021-07-17T04:30:18+00:00 CRITICAL syntax error, unexpected 'do_action' (T_STRING) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 24
+
+2021-07-17T04:56:45+00:00 CRITICAL syntax error, unexpected ''<br />'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 49
+
+2021-07-17T04:56:57+00:00 CRITICAL Object of class WC_Shipping_Local_Pickup could not be converted to string в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 49
+
+2021-07-17T04:57:11+00:00 CRITICAL syntax error, unexpected '.' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 49
+
+2021-07-17T04:57:14+00:00 CRITICAL syntax error, unexpected 'var' (T_VAR) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 49
+
+2021-07-17T04:57:16+00:00 CRITICAL syntax error, unexpected '}' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 50
+
+2021-07-17T05:01:33+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Shipping_Zone::get_payment_methods() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php:47
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(343): WC_S в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 47
+
+2021-07-17T05:01:39+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Shipping_Zone::get_payment_methods() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php:47
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(343): WC_S в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 47
+
+2021-07-17T05:01:43+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Shipping_Zone::get_payment_methods() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php:47
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(343): WC_S в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 47
+
+2021-07-17T05:02:01+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Shipping_Zone::get_payments_methods() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php:47
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(343): WC_ в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 47
+
+2021-07-17T05:05:53+00:00 CRITICAL syntax error, unexpected '<', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 85
+
+2021-07-17T05:05:54+00:00 CRITICAL syntax error, unexpected '<', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 85
+
+2021-07-17T06:28:56+00:00 CRITICAL Uncaught Error: Call to undefined function print_attribute_radio() in E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\templates\single-product\add-to-cart\variable.php:54
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-template-functions.php(1674): wc_get_template('single-product/...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\class-wp-hook.php(292): woocommerce_variable_add_to_cart('')
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#4 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#5 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-template-functions.php(1620): do_action('woocommerce_var...')
+#6 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\class-wp-hook.php(292 в E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\templates\single-product\add-to-cart\variable.php на строке 54
+
+2021-07-17T08:15:43+00:00 CRITICAL Uncaught Error: Call to undefined function the_tit() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-usloviya-dostavki.php:7
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#3 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-usloviya-dostavki.php на строке 7
+
+2021-07-17T10:22:29+00:00 CRITICAL Uncaught Error: Call to undefined function the_fild() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php:12
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#3 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 12
+
+2021-07-17T10:22:32+00:00 CRITICAL Uncaught Error: Call to undefined function the_fild() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php:12
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#3 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 12
+
+2021-07-17T10:22:41+00:00 CRITICAL Uncaught Error: Call to undefined function the_fild() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php:12
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#3 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 12
+
+2021-07-17T10:28:10+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 46
+
+2021-07-17T10:28:13+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 45
+
+2021-07-17T10:28:18+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 45
+
+2021-07-17T10:28:51+00:00 CRITICAL syntax error, unexpected '<' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 30
+
+2021-07-17T10:28:55+00:00 CRITICAL syntax error, unexpected '<' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 30
+
+2021-07-17T10:28:59+00:00 CRITICAL syntax error, unexpected '<' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-contacts.php на строке 30
+
+2021-07-17T13:09:47+00:00 CRITICAL syntax error, unexpected '.' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 122
+
+2021-07-17T13:09:47+00:00 CRITICAL syntax error, unexpected '.' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 122
+
+2021-07-17T13:09:47+00:00 CRITICAL syntax error, unexpected '.' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 122
+
+2021-07-17T13:28:38+00:00 CRITICAL Uncaught Error: Call to undefined function qib_apply_styles() in E:\OSPanel\domains\motomarket.loc\app\content\plugins\qty-increment-buttons-for-woocommerce\qty-increment-buttons-for-woocommerce.php:414
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\class-wp-hook.php(292): {closure}('')
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\general-template.php(3009): do_action('wp_head')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\header.php(7): wp_head()
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template.php(730): require_once('E:\\OSPanel\\doma...')
+#6 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template.php(676): load_template('E:\\OSPanel\\doma...', true, Array)
+#7 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\general- в E:\OSPanel\domains\motomarket.loc\app\content\plugins\qty-increment-buttons-for-woocommerce\qty-increment-buttons-for-woocommerce.php на строке 414
+
+2021-07-17T14:40:03+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:03+00:00 CRITICAL syntax error, unexpected '||' (T_BOOLEAN_OR), expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:04+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:04+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:04+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:04+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:04+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:04+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:04+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:05+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:05+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:40:05+00:00 CRITICAL syntax error, unexpected '|', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 247
+
+2021-07-17T14:51:41+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 274
+
+2021-07-17T14:51:42+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 274
+
+2021-07-17T14:51:42+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 274
+

@@ -1,0 +1,13 @@
+.wpcf7-not-valid-tip {
+	position: absolute;
+	bottom: -32px;
+	left: 0;
+	@include fontRegular();
+	color: #fff;
+	font-size: 12px;
+	line-height: 15px;				
+}
+.screen-reader-response,
+.wpcf7-response-output {
+	display: none;
+}

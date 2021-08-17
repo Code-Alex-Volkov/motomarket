@@ -1,0 +1,24 @@
+.qib-container {
+	border: 1px solid #fff;
+	box-sizing: border-box;
+	width: 112px;
+	height: 50px;
+	button {
+		background-color: transparent;
+		border: 0px solid transparent;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px !important;
+		margin: 0 !important;
+	}
+	input[type=number] {
+		border: 0px solid transparent;
+		color: #fff;
+	}
+	.quantity {
+		margin: 0 !important;
+		.screen-reader-text {
+			display: none;
+		}
+	}
+}

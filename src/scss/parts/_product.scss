@@ -1,0 +1,145 @@
+.products .product {
+	width: 310px;
+	min-height: 495px;
+	margin-left: 10px;
+	margin-right: 10px;
+	position: relative;
+	box-sizing: border-box;
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+	filter: drop-shadow(0px 2px 4px rgba(50, 53, 52, 0.12));
+	.qib-container {
+		display: none !important;
+	}
+	.woocommerce-LoopProduct-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 310px;
+		height: 360px;
+		background-color: #fff;
+		position: relative;
+		.onsale {
+			position: absolute;
+			right: 20px;
+			bottom: 13px;
+			border: 1px solid #DE4949;
+			box-sizing: border-box;
+			padding: 4px 15px;
+			color: #DE4949;
+			font-size: 14px;
+			line-height: 130%;
+			@include fontBold();
+			font-weight: 600;
+		}
+	}
+	.price {
+		font-size: 22px;
+		line-height: 130%;
+		color: #323534;
+		@include fontBold();
+		margin-top: -38px;
+		margin-left: 20px;
+		display: block;
+		position: relative;
+		.woocommerce-Price-currencySymbol {
+			font-size: 16px;
+			line-height: 20px;
+			text-transform: uppercase;
+			color: #323534;
+			@include fontRegular();
+		}
+		del {
+			display: none;
+		}
+		ins {
+			text-decoration: none;
+		}
+	}
+	.link-title {
+		display: block;
+		.woocommerce-loop-product__title {
+			font-size: 16px;
+			line-height: 130%;
+			color: #fff;
+			@include fontBold();
+			font-weight: 600;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+			position: relative;
+			transition: $transition;
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 2px;
+				height: 45px;
+				position: absolute;
+				left: 0;
+				top: -2px;
+				background: #FACE50;
+			}
+		}
+		&:hover {
+			.woocommerce-loop-product__title {
+				color: #FACE50;
+				transition: $transition;
+			}
+		}
+	}
+	.more-details {
+		font-size: 16px;
+		line-height: 130%;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+		@include fontBold();
+		padding: 9px 56px;
+		border: 1px solid #fff;
+		background-color: transparent;
+		transition: $transition;
+		display: inline-block;
+		box-sizing: border-box;
+		position: absolute;
+    	bottom: 10px;
+		&:hover {
+			color: #323534;
+			@include fontBold();
+			background-color: #fff;
+			transition: $transition;
+		}
+	}
+	.link-add-to-cart {
+		position: absolute;
+		right: 45px;
+		bottom: 10px;
+		width: 40px;
+		height: 40px;
+		background-color: #FACE50;
+		border-radius: 1px;
+		transition: $transition;
+		&:hover {
+			background-color: #C99606;
+			transition: $transition;
+		}
+		.add_to_cart_button {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			z-index: 10;
+			position: relative;
+		}
+		> svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 0;
+			width: 20px;
+			height: 20px;
+			path {
+				fill: #323534;
+			}
+		}
+	}
+}

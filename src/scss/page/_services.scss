@@ -1,0 +1,70 @@
+
+
+.left-content-wp {
+	h3 {
+		margin-top:40px;
+	}
+	ul {
+		padding-top:40px;
+		li {
+			a {
+				text-decoration: underline;
+				@include fontRegular();
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 34.2px;
+				letter-spacing: 0.02em;
+				color: #FACE50;
+			}
+		}
+	}
+}
+
+.right-content-wp {
+	margin-top:40px;
+	.window-content {
+		background: #1B1E1D;
+		border-radius: 1px;
+		align-items: center;
+		padding: 50px 45px;
+		ul {
+			li {
+				display: flex;
+				padding-bottom: 30px;
+				img {
+					padding-right: 20px;
+				}
+				.link {
+					@include fontRegular();
+					font-style: normal;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 130%;
+					display: flex;
+					align-items: center;
+					color: #FFFFFF;
+				}
+			}
+		}
+
+		button {
+			width: 300px;
+			height: 50px;
+			background: #FACE50;
+			border-radius: 1px;
+			cursor: pointer;
+			@include fontRegular();
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 130%;
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+			color: #323534;
+			justify-content: center;
+		}
+	}
+}

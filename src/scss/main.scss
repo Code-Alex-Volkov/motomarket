@@ -1,0 +1,24 @@
+@import './plagins/slick';
+@import './plagins/slick-theme';
+
+@import './general/general';
+@import './general/qty';
+@import './general/form';
+@import './general/popup';
+
+// page
+@import './parts/header';
+@import './parts/footer';
+@import './parts/product';
+@import './parts/filter';
+
+@import './page/home';
+@import './page/single-product';
+@import './page/cart';
+@import './page/checkout';
+@import './page/usloviya';
+@import './page/contacts';
+@import './page/faq';
+@import './page/sale';
+@import './page/services';
+@import './page/archive';

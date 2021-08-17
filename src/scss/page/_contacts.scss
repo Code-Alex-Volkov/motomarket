@@ -1,0 +1,58 @@
+.contacts {
+	display: flex;
+	justify-content: space-between;
+	.left-contacts {
+		width: calc(100% - 440px);
+		padding-bottom: 40px;
+		p {
+			@include fontRegular();
+			font-style: normal;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 140%;
+			letter-spacing: 0.02em;
+			color: #FFFFFF;
+			padding-bottom: 20px;
+		}
+		.block {
+			display: flex;
+			flex-wrap: wrap;
+			.item {
+				width: 50%;
+				@include fontRegular();
+				font-style: normal;
+				color: #FFFFFF;
+				padding-left: 32px;
+				.title {
+					font-weight: 600;
+					padding-bottom: 20px;
+					font-size: 18px;
+					line-height: 140%;
+					padding-top: 20px;
+					position: relative;
+					&:before {
+						content: '';
+						width: 12px;
+						height: 12px;
+						background: #FACE50;
+						top: 25px;
+						left: -32px;
+						position: absolute;
+					}
+				}
+				.text {
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 150%;
+				}
+				a {
+					display: block;
+					color: #FFFFFF;
+				}
+			}
+		}
+		.map {
+			padding-top: 40px;
+		}
+	}
+}

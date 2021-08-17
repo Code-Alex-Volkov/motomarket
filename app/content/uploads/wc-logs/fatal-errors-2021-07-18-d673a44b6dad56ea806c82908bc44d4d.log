@@ -1,0 +1,40 @@
+2021-07-18T10:30:51+00:00 CRITICAL require(): Failed opening required 'E:\OSPanel\domains\motomarket.loc\app/content/themes/gulp-theme/parts/filter.php' (include_path='.') в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 6
+
+2021-07-18T10:30:51+00:00 CRITICAL require(): Failed opening required 'E:\OSPanel\domains\motomarket.loc\app/content/themes/gulp-theme/parts/filter.php' (include_path='.') в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 6
+
+2021-07-18T10:31:18+00:00 CRITICAL require(): Failed opening required 'E:\OSPanel\domains\motomarket.loc\app/content/themes/gulp-theme/parts/load-product.php' (include_path='.') в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 8
+
+2021-07-18T10:35:22+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF), expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 56
+
+2021-07-18T10:39:07+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF), expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 56
+
+2021-07-18T10:39:07+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 56
+
+2021-07-18T10:39:08+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 56
+
+2021-07-18T10:39:25+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF), expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 56
+
+2021-07-18T11:03:22+00:00 CRITICAL syntax error, unexpected '.', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 50
+
+2021-07-18T11:03:24+00:00 CRITICAL syntax error, unexpected '.', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 50
+
+2021-07-18T11:03:26+00:00 CRITICAL syntax error, unexpected '.', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 50
+
+2021-07-18T11:03:29+00:00 CRITICAL syntax error, unexpected '.', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 50
+
+2021-07-18T11:03:59+00:00 CRITICAL syntax error, unexpected '.', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 50
+
+2021-07-18T11:32:02+00:00 CRITICAL syntax error, unexpected ';', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 19
+
+2021-07-18T11:32:03+00:00 CRITICAL syntax error, unexpected ';', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 19
+
+2021-07-18T11:32:04+00:00 CRITICAL syntax error, unexpected ';', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 19
+
+2021-07-18T11:32:09+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 21
+
+2021-07-18T11:32:11+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 21
+
+2021-07-18T11:32:17+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 27
+
+2021-07-18T11:45:06+00:00 CRITICAL syntax error, unexpected ']', expecting ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\page-sale.php на строке 36
+

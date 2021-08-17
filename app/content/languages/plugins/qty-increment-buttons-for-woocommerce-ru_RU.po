@@ -1,0 +1,203 @@
+# Translation of Plugins - Qty Increment Buttons for WooCommerce - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Qty Increment Buttons for WooCommerce - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-12-16 09:26:05+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Qty Increment Buttons for WooCommerce - Stable (latest release)\n"
+
+#: qty-increment-buttons-for-woocommerce.php:79
+msgid "Includes button colors (background, font, hover background, focus outline), button styles (focus outline) and quantity input field colors (border). You can adjust this style within your child theme CSS or additional CSS if your theme allows it."
+msgstr "Цвета кнопок (фон, шрифт, фон при наведении, контур), стили кнопок (контур) и цвета поля ввода количества (граница). Вы можете настроить этот стиль в вашей дочерней теме CSS или дополнительном CSS, если ваша тема это позволяет."
+
+#: qty-increment-buttons-for-woocommerce.php:65
+msgid "After Add to cart"
+msgstr "После кнопки добавления в корзину"
+
+#: qty-increment-buttons-for-woocommerce.php:64
+msgid "Position of quantity input field and increment buttons in HTML structure of archives. Visual position may be different depending on float. \"After Add to cart\" is the only way to keep all these elements in one line on some themes."
+msgstr "Расположение поля количество и кнопок в html-структуре архивов. Визуальное положение может быть различным в зависимости от верстки. 'После кнопки добавления в корзину' - это единственный способ сохранить все эти элементы в одну линию на некоторых темах."
+
+#: qty-increment-buttons-for-woocommerce.php:63
+msgid "Archive position"
+msgstr "Положение на страницах архива"
+
+#: qty-increment-buttons-for-woocommerce.php:63
+#: qty-increment-buttons-for-woocommerce.php:65
+msgid "Before Add to cart"
+msgstr "Перед кнопкой добавления в корзину"
+
+#: qty-increment-buttons-for-woocommerce.php:57
+msgid "Turn this setting on to enable the plugin on pages other than product, cart, checkout, shop, category and correctly display Quick Views initiated from these pages."
+msgstr "Включите этот параметр, чтобы добавить плагин на другие страницы, не относящихся к страницам магазина, но создающиеся ими."
+
+#: qty-increment-buttons-for-woocommerce.php:56
+msgid "Check if the plugin doesn't work correctly on your website out of the box."
+msgstr "Включите, если плагин не работает корректно на вашем сайте."
+
+#: qty-increment-buttons-for-woocommerce.php:55
+msgid "Load on all pages"
+msgstr "Загрузить на всех страницах"
+
+#: qty-increment-buttons-for-woocommerce.php:89
+msgid "Recommended 35-50 pixels."
+msgstr "Рекомендуется 35-50 px."
+
+#: qty-increment-buttons-for-woocommerce.php:86
+msgid "Recommended 25-40 pixels."
+msgstr "Рекомендуется 25-40 px."
+
+#: qty-increment-buttons-for-woocommerce.php:83
+msgid "Recommended 25-40 pixels. Quantity input field and Add to cart button will have the same height."
+msgstr "Рекомендуется 25-40 px. Поле ввода количества и кнопка «Добавить в корзину» будут иметь одинаковую высоту."
+
+#: qty-increment-buttons-for-woocommerce.php:78
+#: qty-increment-buttons-for-woocommerce.php:80
+msgid "Silver"
+msgstr "Серебро"
+
+#: qty-increment-buttons-for-woocommerce.php:80
+msgid "Red"
+msgstr "Красный"
+
+#: qty-increment-buttons-for-woocommerce.php:80
+msgid "Orange"
+msgstr "Оранжевый"
+
+#: qty-increment-buttons-for-woocommerce.php:80
+msgid "Brown"
+msgstr "Коричневый"
+
+#: qty-increment-buttons-for-woocommerce.php:80
+msgid "Blue"
+msgstr "Синий"
+
+#: qty-increment-buttons-for-woocommerce.php:80
+msgid "Black"
+msgstr "Чёрный"
+
+#: qty-increment-buttons-for-woocommerce.php:75
+msgid "Horizontal alignment in cart page quantity column. Affects input field and increment buttons. Desktop view only."
+msgstr "Горизонтальное выравнивание в столбце количества на странице корзины. Влияет на поле ввода и кнопки увеличения. Только для обычного вида."
+
+#: qty-increment-buttons-for-woocommerce.php:76
+msgid "Right"
+msgstr "Справа"
+
+#: qty-increment-buttons-for-woocommerce.php:74
+#: qty-increment-buttons-for-woocommerce.php:76
+msgid "Center"
+msgstr "По центру"
+
+#: qty-increment-buttons-for-woocommerce.php:76
+msgid "Left"
+msgstr "Слева"
+
+#: qty-increment-buttons-for-woocommerce.php:73
+msgid "Remove space between increment buttons and quantity input field, visually merging these elements."
+msgstr "Убирает пространство между кнопками и полем ввода количества, визуально объединяя эти элементы."
+
+#: qty-increment-buttons-for-woocommerce.php:70
+msgid "Auto sizes columns on the cart page. Already used by a vast majority of themes. Alternatively merge buttons and reduce widths to fit into fixed-size column."
+msgstr "Автоматически изменяет размеры столбцов на странице корзины. Уже используется в подавляющем большинстве тем. Либо объединит кнопки и уменьшит ширину, чтобы уместить ее в столбце фиксированного размера."
+
+#: qty-increment-buttons-for-woocommerce.php:69
+msgid "Check if you notice buttons overflowing to next column or breaking to next line on the cart page."
+msgstr "Отметьте, если вы заметили не правильное расположение кнопок на странице корзины."
+
+#: qty-increment-buttons-for-woocommerce.php:60
+msgid "Archive pages that should display quantity input field and increment buttons. Doesn't affect variable products and products sold individually."
+msgstr "Архивные страницы, которые должны отображать поле ввода количества и кнопки. Не влияет на вариативные товары и товары, продаваемые индивидуально."
+
+#: qty-increment-buttons-for-woocommerce.php:61
+msgid "Shop & Category"
+msgstr "Витрина и категории"
+
+#: qty-increment-buttons-for-woocommerce.php:61
+msgid "Category"
+msgstr "Категории"
+
+#: qty-increment-buttons-for-woocommerce.php:61
+msgid "Shop"
+msgstr "Витрина"
+
+#: qty-increment-buttons-for-woocommerce.php:59
+#: qty-increment-buttons-for-woocommerce.php:61
+msgid "None"
+msgstr "Ни где"
+
+#: qty-increment-buttons-for-woocommerce.php:138
+msgid "Settings"
+msgstr "Настройки"
+
+#: qty-increment-buttons-for-woocommerce.php:190
+msgid "Rate this plugin"
+msgstr "Оценить плагин"
+
+#: qty-increment-buttons-for-woocommerce.php:188
+msgid "Support & suggestions"
+msgstr "Поддержка и предложения"
+
+#: qty-increment-buttons-for-woocommerce.php:88
+msgid "Quantity field width"
+msgstr "Ширина поля количества"
+
+#: qty-increment-buttons-for-woocommerce.php:85
+msgid "Button width"
+msgstr "Ширина кнопки"
+
+#: qty-increment-buttons-for-woocommerce.php:82
+msgid "Button height"
+msgstr "Высота кнопки"
+
+#: qty-increment-buttons-for-woocommerce.php:78
+msgid "Button style"
+msgstr "Стиль кнопки"
+
+#: qty-increment-buttons-for-woocommerce.php:74
+msgid "Cart page align"
+msgstr "Выравнивание на страницы корзины"
+
+#: qty-increment-buttons-for-woocommerce.php:72
+msgid "Merge buttons"
+msgstr "Соединить кнопки"
+
+#: qty-increment-buttons-for-woocommerce.php:68
+msgid "Auto cart columns"
+msgstr "Автоматический размер столбцов корзины"
+
+#: qty-increment-buttons-for-woocommerce.php:59
+msgid "Archives display"
+msgstr "Отображение на страницах архивов"
+
+#: template/global/quantity-input.php:51
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "Кол-во"
+
+#. translators: %s: Quantity.
+#: template/global/quantity-input.php:36
+msgid "Quantity"
+msgstr "Количество"
+
+#. translators: %s: Quantity.
+#: template/global/quantity-input.php:36
+msgid "%s quantity"
+msgstr "%s количество"
+
+#. Author of the plugin
+msgid "taisho"
+msgstr "taisho"
+
+#. Description of the plugin
+msgid "Adds professionally looking \"-\" and \"+\" buttons around product quantity field, on product and cart page."
+msgstr "Добавляет профессионально выглядящие кнопки \"-\" и \"+\" вокруг поля количества товара, на странице товара и корзины."
+
+#. Plugin Name of the plugin
+msgid "Qty Increment Buttons for WooCommerce"
+msgstr "Qty Increment Buttons for WooCommerce"
