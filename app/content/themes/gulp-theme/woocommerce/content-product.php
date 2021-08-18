@@ -92,6 +92,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	<!-- Добавил кнопку "Подробнее" с ссылкой на товар -->
 	<a class="more-details" href="<?php the_permalink(); ?>">Подробнее</a>
 	<div class="count-ok" style="display: none;">Товар добавлен!</div>
+	<div class="added_to_cart"></div>
 	<?php
 		/**
 		 * Hook: woocommerce_after_shop_loop_item.

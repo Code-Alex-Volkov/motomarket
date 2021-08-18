@@ -44,7 +44,10 @@ $calculator_text          = '';
 						</li>
 					<?php endforeach; ?>
 				</ul>
-				<span class="warning">Информация о доставке</span>
+				<div class="warning">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-important-small.svg" alt="icon">
+					<span>Информация о доставке</span>
+				</div>
 			</div>
 			<?php if ( is_cart() ) : ?>
 				<p class="woocommerce-shipping-destination">

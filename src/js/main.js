@@ -1,5 +1,9 @@
-jQuery(function () {
+$(function () {
 	'use strict';
+
+	$('.click-payment').on('click', function() {
+		$(this).parents('.payment_methods').addClass('active');
+	});
 
 	$('.radio-salefilter').on('click', function() {
 		$(this).parents('.select-class').addClass('active');

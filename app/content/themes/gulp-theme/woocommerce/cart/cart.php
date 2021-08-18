@@ -17,6 +17,11 @@
 
 defined( 'ABSPATH' ) || exit; ?>
 <div class="wrapper">
+	<div class="main-condition"><a href="#">Главная </a><span> - КОРЗИНА</span></div>
+	<div class="box-title">
+		<div class="title-page"><?php the_title(); ?></div>
+		<div class="count-order">В вашем заказе: <?php echo WC()->cart->get_cart_contents_count(); ?> товаров</div>
+	</div>
 	<?php do_action( 'woocommerce_before_cart' ); ?>
 
 	<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">

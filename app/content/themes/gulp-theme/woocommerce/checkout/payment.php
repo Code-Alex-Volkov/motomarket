@@ -28,7 +28,7 @@ if ( ! is_ajax() ) {
 			<ul class="wc_payment_methods payment_methods methods">
 				<?php
 				if ( ! empty( $available_gateways ) ) {
-					echo '<li class="wc_payment_method">' . '<label> Выбери вариант оплаты </label>' . '</li>';
+					echo '<li class="wc_payment_method click-payment">' . '<label> Выбери вариант оплаты </label>' . '</li>';
 					foreach ( $available_gateways as $gateway ) {
 						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
 					}
@@ -37,7 +37,10 @@ if ( ! is_ajax() ) {
 				}
 				?>
 			</ul>
-			<span class="warning">Информация об оплате</span>
+			<div class="warning">
+				<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-important-small.svg" alt="icon">
+				<span>Информация об оплате</span>
+			</div>
 		</div>
 	<?php endif; ?>
 	<div class="form-row place-order delete-place">

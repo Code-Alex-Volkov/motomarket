@@ -234,7 +234,8 @@
 							font-size: 16px;
 							line-height: 130%;
 							color: #A6A6A6;
-	
+							text-align: right;
+							padding-right: 30px;
 						}
 						td {
 							.amount {
@@ -249,6 +250,7 @@
 									span {
 										text-transform: uppercase;
 										font-weight: 400;
+										font-size: 16px;
 									}
 								}
 							}

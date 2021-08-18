@@ -10,3 +10,9 @@
 
 2021-08-18T08:31:29+00:00 CRITICAL syntax error, unexpected '`' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\checkout\form-checkout.php на строке 77
 
+2021-08-18T18:19:17+00:00 CRITICAL syntax error, unexpected '<', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\cart\cart-shipping.php на строке 48
+
+2021-08-18T19:28:30+00:00 CRITICAL Cannot redeclare remove_message_after_add_to_cart() (previously declared in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:385) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 397
+
+2021-08-18T19:28:31+00:00 CRITICAL Cannot redeclare remove_message_after_add_to_cart() (previously declared in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:385) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 397
+

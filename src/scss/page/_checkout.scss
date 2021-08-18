@@ -24,7 +24,7 @@
 }
 .woocommerce-checkout-payment {
 	.payment_methods {
-		width: 310px;
+		width: 380px;
 		height: 48px;
 		overflow: hidden;
 		font-size: 14px;
@@ -66,7 +66,7 @@
 	margin-bottom: 20px;
 }
 .woocommerce-shipping-methods {
-	width: 310px;
+	width: 380px;
 	height: 48px;
 	overflow: hidden;
 	font-size: 14px;
@@ -145,6 +145,9 @@
 	cursor: pointer;
 	position: relative;
 	@include fontRegular();
+	.required {
+		display: none;
+	}
 	a {
 		font-size: 16px;
 		line-height: 140%;
@@ -213,5 +216,51 @@ input[type=checkbox]:checked+.input-checkbox-text::before {
 		@include fontRegular();
 		letter-spacing: 0.02em;
 		color: #FFFFFF;
+		display: flex;
+    	align-items: center;
+		margin-left: 40px;
+		span {
+			margin-left: 15px;
+		}
 	}
 }
+.woocommerce-billing-fields__field-wrapper {
+	input[type=text],
+	input[type=tel],
+	input[type=email] {
+		width: 380px;
+	}
+}
+.click-payment {
+	cursor: pointer;
+}
+.wrapper .box-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 40px;
+	.title-page {
+		padding-bottom: 0;
+	}
+	.count-order {
+		font-size: 14px;
+		line-height: 140%;
+		color: #FFFFFF;
+		@include fontRegular();
+	}
+}
+
+.woocommerce-error {
+	color: #fff;
+	@include fontRegular();
+	font-size: 14px;
+	line-height: 140%;
+	margin-bottom: 30px;
+	li {
+		margin-bottom: 10px;
+	}
+}
+.woocommerce-billing-fields .woocommerce-invalid-required-field input {
+	border-color: red;
+}
+a.added_to_cart {display:none !important}

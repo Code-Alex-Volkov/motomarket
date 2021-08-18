@@ -363,7 +363,7 @@ function truemisha_privacy_checkbox() {
 		'label_class'   => array( 'woocommerce-form__label-for-checkbox' ),
 		'input_class'   => array( 'woocommerce-form__input-checkbox' ),
 		'required'      => true,
-		'label'         => '<span class="input-checkbox-text">Я принимаю условия <a href="/politika">политики обработки персональных данных</a></span>',
+		'label'         => '<span class="input-checkbox-text">Я принимаю условия <a href="/politika" target="_blank">политики обработки персональных данных </a> *</span>',
 	));
  
 }
@@ -377,4 +377,11 @@ function truemisha_privacy_checkbox_error() {
 		wc_add_notice( 'Ваш нужно принять политику конфиденциальности.', 'error' );
 	}
  
+}
+
+add_action( 'woocommerce_init', 'remove_message_after_add_to_cart', 99);
+function remove_message_after_add_to_cart(){
+    if( isset( $_GET['add-to-cart'] ) ){
+        wc_clear_notices();
+    }
 }

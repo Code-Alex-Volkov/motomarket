@@ -19,6 +19,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } ?>
 <div class="wrapper">
+	<div class="main-condition"><a href="#">Главная </a><span> - ОФОРМЛЕНИЕ ЗАКАЗА</span></div>
+	<div class="box-title">
+		<div class="title-page"><?php the_title(); ?></div>
+		<div class="count-order">В вашем заказе: <?php echo WC()->cart->get_cart_contents_count(); ?> товара</div>
+	</div>
 	<?php 
 		do_action( 'woocommerce_before_checkout_form', $checkout );
 		// If checkout registration is disabled and not logged in, the user cannot checkout.
