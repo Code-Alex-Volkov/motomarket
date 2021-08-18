@@ -42,18 +42,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div id="payment" class="woocommerce-checkout-payment"></div>
 
 				<div class="type_delivery">
-					<h3 class="contact_data_ordering_title">СПОСОБ ДОСТАВКИ</h3>
-					<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
+					
+					<h3 class="contact_data_ordering_title">Доставка заказа</h3>
 
-						<?php do_action( 'woocommerce_review_order_before_shipping' ); ?>
+					<?php do_action( 'woocommerce_review_order_before_shipping' ); ?>
 							<?php wc_cart_totals_shipping_html(); ?> 
 						<?php do_action( 'woocommerce_review_order_after_shipping' ); ?>
-
-					<?php endif; ?>
 
 				</div>
 
 				<div class="col-2">
+					<h3 class="contact_data_ordering_title">Адрес доставки</h3>
 					<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 				</div>
 			</div>
@@ -74,7 +73,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-			<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">Подтвердить заказ</button>' ); // @codingStandardsIgnoreLine ?>
+			<div class="btn-box-checkout">
+				<a class="add-order" href="/cart">изменить состав заказа</a>
+				<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="sign-up button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">Подтвердить заказ</button>' ); // @codingStandardsIgnoreLine ?>
+			</div>
 
 			<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

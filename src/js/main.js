@@ -282,7 +282,6 @@ jQuery(function () {
 		$(this).removeClass('active');
 	});
 
-
 	$('.tab-item').click(function () {
 		let text = $(this).text();
 		setTimeout(function () {
@@ -293,8 +292,6 @@ jQuery(function () {
 		$(this).addClass('active');
 	})
 
-
-
 	$(".instagram-box").not('.slick-initialized').slick({
 		autoplay: true,
 		autoplaySpeed: 700000000,
@@ -304,11 +301,7 @@ jQuery(function () {
 		slidesToScroll: 1
 	});
 
-
-
 	$('.slick-prev').html('<span class="arr"></span>');
 	$('.slick-next').html('<span class="arr"></span>');
-
-
 
 });

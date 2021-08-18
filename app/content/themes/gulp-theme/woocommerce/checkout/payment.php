@@ -22,18 +22,23 @@ if ( ! is_ajax() ) {
 }
 ?>
 <div id="payment" class="woocommerce-checkout-payment">
+	<h3>Варианты оплаты</h3>
 	<?php if ( WC()->cart->needs_payment() ) : ?>
-		<ul class="wc_payment_methods payment_methods methods">
-			<?php
-			if ( ! empty( $available_gateways ) ) {
-				foreach ( $available_gateways as $gateway ) {
-					wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
+		<div class="box-shipping">
+			<ul class="wc_payment_methods payment_methods methods">
+				<?php
+				if ( ! empty( $available_gateways ) ) {
+					echo '<li class="wc_payment_method">' . '<label> Выбери вариант оплаты </label>' . '</li>';
+					foreach ( $available_gateways as $gateway ) {
+						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
+					}
+				} else {
+					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'woocommerce' ) ) . '</li>'; // @codingStandardsIgnoreLine
 				}
-			} else {
-				echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'woocommerce' ) ) . '</li>'; // @codingStandardsIgnoreLine
-			}
-			?>
-		</ul>
+				?>
+			</ul>
+			<span class="warning">Информация об оплате</span>
+		</div>
 	<?php endif; ?>
 	<div class="form-row place-order delete-place">
 		<noscript>

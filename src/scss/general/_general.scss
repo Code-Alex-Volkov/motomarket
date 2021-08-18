@@ -349,7 +349,8 @@ body {
 }
 
 .loader,
-#filter-loader {
+#filter-loader,
+.blockUI {
 	width: 100%;
 	height: 600px;
 	background-color: rgba(250,206,80,.9);
@@ -373,10 +374,11 @@ body {
 	}
 }
 
-#filter-loader {
+#filter-loader,
+.blockUI {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(50,53,52,.9);
+	background-color: rgba(50,53,52,.9) !important;
 }
 
 @keyframes load-svg {

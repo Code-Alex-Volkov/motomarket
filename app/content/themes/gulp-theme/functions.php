@@ -351,3 +351,30 @@ function truemisha_product_gallery_arrows( $options ) {
 	return $options;
  
 }
+
+// Добавление чекбокса
+add_action( 'woocommerce_review_order_before_submit', 'truemisha_privacy_checkbox', 25 );
+ 
+function truemisha_privacy_checkbox() {
+ 
+	woocommerce_form_field( 'privacy_policy_checkbox', array(
+		'type'          => 'checkbox',
+		'class'         => array( 'form-row' ),
+		'label_class'   => array( 'woocommerce-form__label-for-checkbox' ),
+		'input_class'   => array( 'woocommerce-form__input-checkbox' ),
+		'required'      => true,
+		'label'         => '<span class="input-checkbox-text">Я принимаю условия <a href="/politika">политики обработки персональных данных</a></span>',
+	));
+ 
+}
+ 
+// Валидация
+add_action( 'woocommerce_checkout_process', 'truemisha_privacy_checkbox_error', 25 );
+ 
+function truemisha_privacy_checkbox_error() {
+ 
+	if ( empty( $_POST[ 'privacy_policy_checkbox' ] ) ) {
+		wc_add_notice( 'Ваш нужно принять политику конфиденциальности.', 'error' );
+	}
+ 
+}
