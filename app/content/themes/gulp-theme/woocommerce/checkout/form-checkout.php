@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="main-condition"><a href="#">Главная </a><span> - ОФОРМЛЕНИЕ ЗАКАЗА</span></div>
 	<div class="box-title">
 		<div class="title-page"><?php the_title(); ?></div>
-		<div class="count-order">В вашем заказе: <?php echo WC()->cart->get_cart_contents_count(); ?> товара</div>
+		<div class="count-order">В вашем заказе: <span><?php echo WC()->cart->get_cart_contents_count(); ?> товара</span></div>
 	</div>
 	<?php 
 		do_action( 'woocommerce_before_checkout_form', $checkout );
@@ -51,8 +51,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<h3 class="contact_data_ordering_title">Доставка заказа</h3>
 
 					<?php do_action( 'woocommerce_review_order_before_shipping' ); ?>
-							<?php wc_cart_totals_shipping_html(); ?> 
-						<?php do_action( 'woocommerce_review_order_after_shipping' ); ?>
+						<?php wc_cart_totals_shipping_html(); ?> 
+					<?php do_action( 'woocommerce_review_order_after_shipping' ); ?>
 
 				</div>
 

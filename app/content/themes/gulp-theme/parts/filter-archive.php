@@ -1,43 +1,28 @@
 <?php
 
-add_action('wp_ajax_salefilter', 'alex_filter_function'); // wp_ajax_{ACTION HERE} 
-add_action('wp_ajax_nopriv_salefilter', 'alex_filter_function'); // wp_ajax_nopriv_{ACTION HERE} 
+add_action('wp_ajax_archivefilter', 'alex_archivefilter_function'); // wp_ajax_{ACTION HERE} 
+add_action('wp_ajax_nopriv_archivefilter', 'alex_archivefilter_function'); // wp_ajax_nopriv_{ACTION HERE} 
  
-function alex_filter_function(){
+function alex_archivefilter_function(){
 	$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$args = array(
 		'post_type'     	=> 'product',
-		'posts_per_page' 	=> 4, // Выводит 18 товаров на страницу
+		'posts_per_page' 	=> 3, // Выводит 18 товаров на страницу
 		'paged'				=> $current_page,
 		'orderby' 			=> 'date', // Сортировка товаров по дате
 		'order'	 			=> 'DESC', // ASC or DESC
 		'meta_query' => [ 
-		    'relation'=>'AND',
-		    [
+		   'relation'=>'AND',
+		   [
     			'key' => '_stock_status',
     			'value' => 'instock',
-    		],
-			[
-				'relation' => 'OR',
-				[
-					'key'       => '_sale_price',
-					'value'     => 0,
-					'compare'   => '>',
-					'type'      => 'numeric'
-				],
-				[
-					'key'       => '_min_variation_sale_price',
-					'value'     => 0,
-					'compare'   => '>',
-					'type'      => 'numeric'
-				] 
-			]
-		],
+    		]
+		]
 	);
 
 	// СТАРТ ОБЩИЕ ПАРАМЕТРЫ
 	// Сортировка по дата (Вначеле - новые) +++++++++++++++
-	if( isset( $_POST['salefilter'] ) && $_POST['salefilter'] == 'date_desc' ){
+	if( isset( $_POST['archivefilter'] ) && $_POST['archivefilter'] == 'date_desc' ){
 		foreach ($args as $value => $key) {
 			if ($value == 'orderby') { $args[$value] = 'date'; };
 			if ($value == 'order') { $args[$value] = 'DESC'; };
@@ -46,7 +31,7 @@ function alex_filter_function(){
 	// Сортировка по дата (Вначеле - старые)
 
 	// Сортировка по Популярности (Товары с наибольшими продажами в этой категории)++++++++++++++++
-	if( isset( $_POST['salefilter'] ) && $_POST['salefilter'] == 'popular' ) {
+	if( isset( $_POST['archivefilter'] ) && $_POST['archivefilter'] == 'popular' ) {
 		$args += ['meta_key'=>'total_sales'];
 		$args['meta_query'][] = array(
 			'key' 		=> 'total_sales',
@@ -60,7 +45,7 @@ function alex_filter_function(){
 		}
 	}
 	// Сортировка по Цене ( 0 - 9 )+++++++++++++++
-	if( isset( $_POST['salefilter'] ) && $_POST['salefilter'] == 'price_desc' ) {
+	if( isset( $_POST['archivefilter'] ) && $_POST['archivefilter'] == 'price_desc' ) {
 		$args += ['meta_key'=>'_price'];
 		$args['meta_query'][] = array(
 			'key' 		=> '_price',
@@ -74,7 +59,7 @@ function alex_filter_function(){
 		}
 	}
 	// Сортировка по Цене ( 9 - 0 )++++++++++++++++
-	if( isset( $_POST['salefilter'] ) && $_POST['salefilter'] == 'price_asc' ) {
+	if( isset( $_POST['archivefilter'] ) && $_POST['archivefilter'] == 'price_asc' ) {
 		$args += ['meta_key'=>'_price'];
 		$args['meta_query'][] = array(
 			'key' 		=> '_price',
@@ -89,14 +74,14 @@ function alex_filter_function(){
 	}
 	// ЦОНЕЦ ОБЩИЕ ПАРАМЕТРЫ
 
-	// Проверить, что форма отправляет через ajax
-	echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
-	print_r($_POST);
-	echo '</pre>';
-	// Проверить, по каким параметрам будут выводиться товары
-	echo '<pre style="border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
-	print_r($args);
-	echo '</pre></div>';
+	// // Проверить, что форма отправляет через ajax
+	// echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
+	// print_r($_POST);
+	// echo '</pre>';
+	// // Проверить, по каким параметрам будут выводиться товары
+	// echo '<pre style="border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
+	// print_r($args);
+	// echo '</pre></div>';
 
 	// Старт Вывод отсортированных продуктов
 	query_posts( $args );
@@ -117,7 +102,7 @@ function alex_filter_function(){
 			var foundPosts = <?php echo $wp_query->found_posts; ?>;
 		</script>
 
-		<div class="btn" id="true_loadmore">
+		<div class="btn" id="catalog_loadmore">
 			<button class="show_more btn_click">
 				<span class="btn_text">Показать еще</span>
 			</button>
@@ -125,10 +110,10 @@ function alex_filter_function(){
 		<!-- <script src="<?php //echo get_template_directory_uri() ?>/assets/js/loadmore.js"></script> -->
 		<script>
 			jQuery(function () {
-				$('#true_loadmore').on('click', function () {
-					$('#true_loadmore .show_more').text('Загружаю...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+				$('#catalog_loadmore').on('click', function () {
+					$('#catalog_loadmore .show_more').text('Загружаю...'); // изменяем текст кнопки, вы также можете добавить прелоадер
 					var data = {
-						'action': 'loadmore',
+						'action': 'catalogloadmore',
 						'query': true_posts,
 						'page': current_page
 					};
@@ -142,21 +127,21 @@ function alex_filter_function(){
 						type: 'POST', // тип запроса
 						success: function (data) {
 							if (data) {
-								$('#true_loadmore').html('<button class="show_more btn_click"><span class="btn_text">Показать еще</span></button>').before(data); // вставляем новые посты
+								$('#catalog_loadmore').html('<button class="show_more btn_click"><span class="btn_text">Показать еще</span></button>').before(data); // вставляем новые посты
 								current_page++; // увеличиваем номер страницы на единицу
 								// let math = Math.floor(data.length / 2936);
 								
 								// let numberSpan = $('.number-span').text();
 								
-								if (current_page == max_pages) $("#true_loadmore").remove(); // если последняя страница, удаляем кнопку
+								if (current_page == max_pages) $("#catalog_loadmore").remove(); // если последняя страница, удаляем кнопку
 							} else {
-								$('#true_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
+								$('#catalog_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
 							}
 							
-							if( prLength < 4 ) {
+							if( prLength < 3 ) {
 								$('.number-span').text(parseInt(numberSpan) + prLength);
 							} else {
-								$('.number-span').text(parseInt(numberSpan) + 4);
+								$('.number-span').text(parseInt(numberSpan) + 3);
 							}
 						}
 					});

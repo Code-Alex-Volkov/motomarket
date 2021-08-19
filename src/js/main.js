@@ -1,9 +1,23 @@
 $(function () {
 	'use strict';
-
+	
 	$('.click-payment').on('click', function() {
-		$(this).parents('.payment_methods').addClass('active');
+		console.log('+');
+		// $(this).parents('.payment_methods').addClass('active');
 	});
+
+	var timeout;
+	$('.woocommerce').on('change', '.qty', function () {
+		console.log('+');
+		if (timeout !== undefined) {
+			clearTimeout(timeout);
+		}
+		timeout = setTimeout(function () {
+			$("[name='update_cart']").trigger("click");
+		}, 1000);
+	});
+
+	$('.cross-sells > h2').text('Вам будут интересны');
 
 	$('.radio-salefilter').on('click', function() {
 		$(this).parents('.select-class').addClass('active');
@@ -44,14 +58,38 @@ $(function () {
 	$("#input-right").bind("input", setRightValue);
 
 	$('.input-submit').on('click', function () {
-		$('#salefilter').submit();
 		$('#catalogfilter').submit();
+		$('.number-span').text(3);
+	});
+
+	$('.input-sale').on('click', function () {
+		$('#salefilter').submit();
 		$('.number-span').text(4);
 	});
 
 	// Обработка фильтра
 	$('#salefilter').on('submit', function () {
 		let filter = $('#salefilter');
+		$.ajax({
+			url: filter.attr('action'),
+			data: filter.serialize(), // form data
+			type: filter.attr('method'), // POST
+			beforeSend: function (xhr) {
+				filter.find('button').text('Загрузка...');
+				$('#filter-loader').show();
+			},
+			success: function (data) {
+				$('#filter-loader').hide();
+				filter.find('button').text('Применить фильтр');
+				$('#response').html(data);
+			}
+		});
+		return false;
+	});
+
+	// Обработка фильтра
+	$('#archivefilter').on('submit', function () {
+		let filter = $('#archivefilter');
 		$.ajax({
 			url: filter.attr('action'),
 			data: filter.serialize(), // form data
@@ -132,6 +170,13 @@ $(function () {
 			'query': true_posts,
 			'page': current_page
 		};
+		
+		let productLength = $('#response').find('li.product').length;
+		let numberSpan = $('.number-span').text();
+		let prLength = foundPosts - productLength;
+		console.log(productLength);
+		console.log(numberSpan);
+
 		$.ajax({
 			url: url, // обработчик
 			data: data, // данные
@@ -139,10 +184,15 @@ $(function () {
 			success: function (data) {
 				if (data) {
 					$('#catalog_loadmore').html('<button class="show_more btn_click"><span class="btn_text">Показать еще</span></button>').before(data); // вставляем новые посты
-					current_page++; // увеличиваем номер страницы на единицу
+					current_page++; // увеличиваем номер страницы на единицу		
 					if (current_page == max_pages) $("#catalog_loadmore").remove(); // если последняя страница, удаляем кнопку
 				} else {
 					$('#catalog_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
+				}
+				if( prLength < 3 ) {
+					$('.number-span').text(parseInt(numberSpan) + prLength);
+				} else {
+					$('.number-span').text(parseInt(numberSpan) + 3);
 				}
 			}
 		});
@@ -159,15 +209,6 @@ $(function () {
 
 
 	$('.single_add_to_cart_button .cart-title').text('В корзину');
-	var timeout;
-	$('.woocommerce').on('change', 'input.qty', function () {
-		if (timeout !== undefined) {
-			clearTimeout(timeout);
-		}
-		timeout = setTimeout(function () {
-			$("[name='update_cart']").trigger("click");
-		}, 1000);
-	});
 
 	/* Slider Inner Page */
 	$('.product-gallery-slider-big').slick({

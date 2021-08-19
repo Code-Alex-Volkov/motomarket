@@ -121,6 +121,48 @@
 		</label>
 	</div>
 
+	<div class="form-filter form-absolute">
+		<div class="left">
+			<span class="title-class">Сортировать по:</span>
+			<ul class="select-class">
+				<li>
+					<span class="radio-salefilter">Новинки</span>
+				</li>
+				<!-- Новинки -->
+				<li class="option-class">
+					<label>
+						<input class="input-submit" type="radio" name="catalogfilter" checked="checked" value="date_desc" />
+						<span>Новинки</span>
+					</label>
+				</li>
+				<!-- Популярные -->
+				<li class="option-class">
+					<label>
+						<input class="input-submit" type="radio" name="catalogfilter" value="popular" />
+						<span>Популярные</span>
+					</label>
+				</li>
+				<!-- Цена по убыванию -->
+				<li class="option-class">
+					<label>
+						<input class="input-submit" type="radio" name="catalogfilter" value="price_asc" />
+						<span>Цена по убыванию</span>
+					</label>
+				</li>
+				<!-- Цена по возрастанию -->
+				<li class="option-class">
+					<label>
+						<input class="input-submit" type="radio" name="catalogfilter" value="price_desc" />
+						<span>Цена по возрастанию</span>
+					</label>
+				</li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="count-box">Показано 1- <span class="number-span"> 3</span> из <?php echo $wp_query->found_posts; ?> результатов</div>
+		</div>
+	</div>
+
 	<!-- Кнопка Применить фильтр -->
 	<button class="filter-btn">Очистить фильтр</button>
 	<!-- Кнопка Применить фильтр -->

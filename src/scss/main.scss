@@ -6,12 +6,12 @@
 @import './general/form';
 @import './general/popup';
 
-// page
 @import './parts/header';
 @import './parts/footer';
 @import './parts/product';
 @import './parts/filter';
 
+// page
 @import './page/home';
 @import './page/single-product';
 @import './page/cart';
@@ -22,3 +22,4 @@
 @import './page/sale';
 @import './page/services';
 @import './page/archive';
+@import './page/payment';

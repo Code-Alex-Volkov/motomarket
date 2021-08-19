@@ -1,4 +1,11 @@
 .catalog-content {
 	display: flex;
 	justify-content: space-between;
+	position: relative;
+	.right-content {
+		width: calc(100% - 328px);
+		.title-page {
+			padding-bottom: 80px;
+		}
+	}
 }

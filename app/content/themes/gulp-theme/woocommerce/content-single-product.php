@@ -91,6 +91,7 @@ if ( post_password_required() ) {
 	</div>
 
 	<div class="featured-products">
+		<h3>Также рекомендуем</h3>
 		<?php echo do_shortcode('[featured_products per_page="3" columns="1"]'); ?>
 	</div>
 	

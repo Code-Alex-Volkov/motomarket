@@ -1,0 +1,43 @@
+.content-payment {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: calc(100vh - 470px);
+	h2 {
+		font-size: 32px;
+		line-height: 130%;
+		letter-spacing: .02em;
+		color: #fff;
+		@include fontRegular();
+		margin-top: 50px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 130%;
+		letter-spacing: .02em;
+		color: #fff;
+		@include fontRegular();
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+	.go-home {
+		font-size: 16px;
+		line-height: 130%;
+		letter-spacing: .02em;
+		color: #fff;
+		@include fontBold();
+		padding: 9px 56px;
+		border: 1px solid #fff;
+		background-color: transparent;
+		transition: $transition;
+		display: inline-block;
+		box-sizing: border-box;
+		margin-bottom: 50px;
+		&:hover {
+			background-color: #fff;
+			transition: $transition;
+			color:#323534;
+		}
+	}
+}

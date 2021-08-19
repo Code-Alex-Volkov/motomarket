@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
+
+
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
@@ -30,6 +32,8 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
+
+	<div class="main-condition"><a href="/">Главная </a> - <a href="/catalog">  Каталог </a><span> - ОФОРМЛЕНИЕ ЗАКАЗА</span></div>
 
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>

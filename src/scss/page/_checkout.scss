@@ -23,38 +23,78 @@
 	margin-bottom: 40px;
 }
 .woocommerce-checkout-payment {
-	.payment_methods {
-		width: 380px;
-		height: 48px;
-		overflow: hidden;
-		font-size: 14px;
-		line-height: 130%;
-		color: #A6A6A6;
-		@include fontBold();
-		border: 1px solid #A6A6A6;
-		box-sizing: border-box;
-		border-radius: 1px;
-		background: transparent;
-		padding-left: 20px;
-		padding-right: 10px;
-		&:focus {
-			background: #323534;
-			border: 1px solid #FACE50;
-			color: #f5f5f5;
+	.box-peyment {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		.click-payment {
+			width: 380px;
+			height: 48px;
+			overflow: hidden;
+			font-size: 14px;
+			line-height: 48px;
+			color: #A6A6A6;
+			@include fontBold();
+			border: 1px solid #A6A6A6;
+			box-sizing: border-box;
+			border-radius: 1px;
+			background: transparent;
+			padding-left: 20px;
+			padding-right: 10px;
+			cursor: pointer;
 		}
-		.wc_payment_method {
-			input[type=radio] {
-				display: none;
+		.payment_methods {
+			position: absolute;
+			top: 0;
+			top: 47px;
+			z-index: 100;
+			width: 380px;
+			max-height: 0px;
+			overflow: hidden;
+			font-size: 14px;
+			line-height: 130%;
+			color: #A6A6A6;
+			@include fontBold();
+			border: 0px solid #A6A6A6;
+			background-color: $background;
+			box-sizing: border-box;
+			border-radius: 1px;
+			transition: $transition;
+			&:focus {
+				background: #323534;
+				border: 1px solid #FACE50;
+				color: #f5f5f5;
 			}
-			label {
-				color: #A6A6A6;
-				@include fontBold();
-				font-size: 14px;
-				line-height: 130%;
-				line-height: 48px;
+			.wc_payment_method {
+				padding-left: 20px;
+				padding-right: 10px;
+				cursor: pointer;
+				&:hover {
+					background-color: #A6A6A6;
+					label {
+						color: #323534;
+					}
+				}
+				input[type=radio] {
+					display: none;
+				}
+				label {
+					color: #A6A6A6;
+					@include fontBold();
+					font-size: 14px;
+					line-height: 130%;
+					line-height: 48px;
+					cursor: pointer;
+				}
+			}
+			&.active {
+				max-height: 150px;
+				border: 1px solid #A6A6A6;
+				transition: $transition;
 			}
 		}
 	}
+	
 }
 
 .checkout.woocommerce-checkout h3 {
@@ -65,38 +105,78 @@
 	font-weight: 600;
 	margin-bottom: 20px;
 }
-.woocommerce-shipping-methods {
-	width: 380px;
-	height: 48px;
-	overflow: hidden;
-	font-size: 14px;
-	line-height: 130%;
-	color: #A6A6A6;
-	@include fontBold();
-	border: 1px solid #A6A6A6;
-	box-sizing: border-box;
-	border-radius: 1px;
-	background: transparent;
-	padding-left: 20px;
-	padding-right: 10px;
-	&:focus {
-		background: #323534;
-		border: 1px solid #FACE50;
-		color: #f5f5f5;
+.box-shipping-block {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	.click-shipping {
+		width: 380px;
+		height: 48px;
+		overflow: hidden;
+		font-size: 14px;
+		line-height: 48px;
+		color: #A6A6A6;
+		@include fontBold();
+		border: 1px solid #A6A6A6;
+		box-sizing: border-box;
+		border-radius: 1px;
+		background: transparent;
+		padding-left: 20px;
+		padding-right: 10px;
+		cursor: pointer;
 	}
-	li {
-		input[type=radio] {
-			display: none;
+	.woocommerce-shipping-methods {
+		position: absolute;
+		top: 0;
+		top: 47px;
+		z-index: 100;
+		width: 380px;
+		max-height: 0px;
+		overflow: hidden;
+		font-size: 14px;
+		line-height: 130%;
+		color: #A6A6A6;
+		@include fontBold();
+		border: 0px solid #A6A6A6;
+		background-color: $background;
+		box-sizing: border-box;
+		border-radius: 1px;
+		transition: $transition;
+		&:focus {
+			background: #323534;
+			border: 1px solid #FACE50;
+			color: #f5f5f5;
 		}
-		label {
-			color: #A6A6A6;
-			@include fontBold();
-			font-size: 14px;
-			line-height: 130%;
-			line-height: 48px;
+		li {
+			padding-left: 20px;
+			padding-right: 10px;
+			cursor: pointer;
+			&:hover {
+				background-color: #A6A6A6;
+				label {
+					color: #323534;
+				}
+			}
+			input[type=radio] {
+				display: none;
+			}
+			label {
+				color: #A6A6A6;
+				@include fontBold();
+				font-size: 14px;
+				line-height: 130%;
+				line-height: 48px;
+				cursor: pointer;
+			}
+		}
+		&.active {
+			max-height: 150px;
+			border: 1px solid #A6A6A6;
+			transition: $transition;
 		}
 	}
 }
+
 .col-2 {
 	input[type=text] {
 		width: 100%;
@@ -127,6 +207,12 @@
 		box-sizing: border-box;
 		border-radius: 1px;
 		text-align: center;
+		transition: $transition;
+		&:hover {
+			background-color: #fff;
+			color: #323534;
+			transition: $transition;
+		}
 	}
 	.sign-up {
 		position: initial;
@@ -247,6 +333,9 @@ input[type=checkbox]:checked+.input-checkbox-text::before {
 		line-height: 140%;
 		color: #FFFFFF;
 		@include fontRegular();
+		> span {
+			@include fontBold();
+		}
 	}
 }
 

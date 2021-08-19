@@ -5,6 +5,7 @@ require get_template_directory() . '/parts/sliderform.php';
 // Рaбота с AJAX
 require get_template_directory() . '/parts/filter.php';
 require get_template_directory() . '/parts/catalog-filter.php';
+require get_template_directory() . '/parts/filter-archive.php';
 // Рaбота с AJAX
 require get_template_directory() . '/parts/load-product.php';
 require get_template_directory() . '/parts/catalog-loadmore.php';
@@ -354,9 +355,7 @@ function truemisha_product_gallery_arrows( $options ) {
 
 // Добавление чекбокса
 add_action( 'woocommerce_review_order_before_submit', 'truemisha_privacy_checkbox', 25 );
- 
 function truemisha_privacy_checkbox() {
- 
 	woocommerce_form_field( 'privacy_policy_checkbox', array(
 		'type'          => 'checkbox',
 		'class'         => array( 'form-row' ),
@@ -370,13 +369,10 @@ function truemisha_privacy_checkbox() {
  
 // Валидация
 add_action( 'woocommerce_checkout_process', 'truemisha_privacy_checkbox_error', 25 );
- 
 function truemisha_privacy_checkbox_error() {
- 
 	if ( empty( $_POST[ 'privacy_policy_checkbox' ] ) ) {
 		wc_add_notice( 'Ваш нужно принять политику конфиденциальности.', 'error' );
 	}
- 
 }
 
 add_action( 'woocommerce_init', 'remove_message_after_add_to_cart', 99);
@@ -384,4 +380,42 @@ function remove_message_after_add_to_cart(){
     if( isset( $_GET['add-to-cart'] ) ){
         wc_clear_notices();
     }
+}
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+add_action( 'woocommerce_cart_collaterals_alex', 'woocommerce_cross_sell_display' );
+
+add_action( 'woocommerce_after_cart_item_name', 'truemisha_artikul_in_cart', 25 );
+ 
+function truemisha_artikul_in_cart( $cart_item ) {
+
+	$sku = $cart_item['data']->get_sku();
+	if( $sku ) { // если заполнен, то выводим
+		echo '<div class="articul">Артикул: <span>' . $sku . '</span></div>';
+	}
+}
+
+add_filter( 'wc_add_to_cart_message_html', 'truemisha_tovar_v_korzine', 10, 3 );
+function truemisha_tovar_v_korzine( $message, $products, $show_qty ) {
+  return '' ;
+}
+
+// Redirect to ThankYou
+add_action( 'template_redirect', 'truemisha_redirect_to_thank_you' );
+function truemisha_redirect_to_thank_you() {
+	// если не страница "Заказ принят", то ничего не делаем
+	if( ! is_order_received_page() ) {
+		return;
+	}
+	// неплохо бы проверить статус заказа, не редиректим зафейленные заказы
+	if( isset( $_GET[ 'key' ] ) ) {
+		$order_id = wc_get_order_id_by_order_key( $_GET[ 'key' ] );
+    $order = wc_get_order( $order_id ); // Обнуление корзины после редиректа
+    global $woocommerce;                // Обнуление корзины после редиректа
+      $woocommerce->cart->empty_cart();
+		if( $order->has_status( 'failed' ) ) {
+			return;
+		}
+	}
+	wp_redirect( site_url( 'payment' ) ); // Название страницы, куда делать редирект
+	exit;
 }

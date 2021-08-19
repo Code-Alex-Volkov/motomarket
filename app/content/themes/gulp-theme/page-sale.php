@@ -3,41 +3,41 @@
 <div class="wrapper">
 	<div class="main-ask"><a href="#">Главная </a><span> - РАСПРОДАЖА</span></div>
 	<div class="title-page"><?php the_title(); ?></div>
-<?php 
+	<?php 
 
-	$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	$args = array(
-		'post_type'     	  	=> 'product',
-		'paged'           	=> $current_page,
-		'order'           	=> 'DESC',
-		'posts_per_page'		=> 4,
-		'meta_query' => [ 
-			[
-				'key' 		=> '_stock_status',
-				'value' 		=> 'instock',
-			],
-			[
-				'relation' => 'OR',
+		$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		$args = array(
+			'post_type'     	  	=> 'product',
+			'paged'           	=> $current_page,
+			'order'           	=> 'DESC',
+			'posts_per_page'		=> 4,
+			'meta_query' => [ 
 				[
-					'key'       => '_sale_price',
-					'value'     => 0,
-					'compare'   => '>',
-					'type'      => 'numeric'
+					'key' 		=> '_stock_status',
+					'value' 		=> 'instock',
 				],
 				[
-					'key'       => '_min_variation_sale_price',
-					'value'     => 0,
-					'compare'   => '>',
-					'type'      => 'numeric'
-				] 
-			]
-		],
-	);
-	
-	$wp_query = new WP_Query( $args );
+					'relation' => 'OR',
+					[
+						'key'       => '_sale_price',
+						'value'     => 0,
+						'compare'   => '>',
+						'type'      => 'numeric'
+					],
+					[
+						'key'       => '_min_variation_sale_price',
+						'value'     => 0,
+						'compare'   => '>',
+						'type'      => 'numeric'
+					] 
+				]
+			],
+		);
+		
+		$wp_query = new WP_Query( $args );
 	
 	?>
-	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="salefilter">
+	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="salefilter" class="form-filter">
 		<div class="left">
 			<span class="title-class">Сортировать по:</span>
 			<ul class="select-class">
@@ -47,28 +47,28 @@
 				<!-- Новинки -->
 				<li class="option-class">
 					<label>
-						<input class="input-submit" type="radio" name="salefilter" checked="checked" value="date_desc" />
+						<input class="input-sale" type="radio" name="salefilter" checked="checked" value="date_desc" />
 						<span>Новинки</span>
 					</label>
 				</li>
 				<!-- Популярные -->
 				<li class="option-class">
 					<label>
-						<input class="input-submit" type="radio" name="salefilter" value="popular" />
+						<input class="input-sale" type="radio" name="salefilter" value="popular" />
 						<span>Популярные</span>
 					</label>
 				</li>
 				<!-- Цена по убыванию -->
 				<li class="option-class">
 					<label>
-						<input class="input-submit" type="radio" name="salefilter" value="price_asc" />
+						<input class="input-sale" type="radio" name="salefilter" value="price_asc" />
 						<span>Цена по убыванию</span>
 					</label>
 				</li>
 				<!-- Цена по возрастанию -->
 				<li class="option-class">
 					<label>
-						<input class="input-submit" type="radio" name="salefilter" value="price_desc" />
+						<input class="input-sale" type="radio" name="salefilter" value="price_desc" />
 						<span>Цена по возрастанию</span>
 					</label>
 				</li>

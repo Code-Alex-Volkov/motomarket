@@ -258,4 +258,11 @@
 	text-decoration-line: underline;
 	color: #C99606;
 	@include fontRegular();
- }
+}
+
+.form-absolute {
+	position: absolute;
+	top: 90px;
+	right: 0;
+	width: calc(100% - 328px);
+}

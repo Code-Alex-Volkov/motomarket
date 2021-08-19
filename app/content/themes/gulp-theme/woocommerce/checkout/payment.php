@@ -25,23 +25,27 @@ if ( ! is_ajax() ) {
 	<h3>Варианты оплаты</h3>
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<div class="box-shipping">
-			<ul class="wc_payment_methods payment_methods methods">
-				<?php
-				if ( ! empty( $available_gateways ) ) {
-					echo '<li class="wc_payment_method click-payment">' . '<label> Выбери вариант оплаты </label>' . '</li>';
-					foreach ( $available_gateways as $gateway ) {
-						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
+			<div class="box-peyment">
+				<div class="click-payment">Выбери вариант оплаты</div>
+				<ul class="wc_payment_methods payment_methods methods">
+					<?php
+					if ( ! empty( $available_gateways ) ) {
+						// echo '<li class="wc_payment_method click-payment">' . '<label> Выбери вариант оплаты </label>' . '</li>';
+						foreach ( $available_gateways as $gateway ) {
+							wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
+						}
+					} else {
+						echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'woocommerce' ) ) . '</li>'; // @codingStandardsIgnoreLine
 					}
-				} else {
-					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'woocommerce' ) ) . '</li>'; // @codingStandardsIgnoreLine
-				}
-				?>
-			</ul>
+					?>
+				</ul>
+			</div>
 			<div class="warning">
 				<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-important-small.svg" alt="icon">
 				<span>Информация об оплате</span>
 			</div>
 		</div>
+		
 	<?php endif; ?>
 	<div class="form-row place-order delete-place">
 		<noscript>
@@ -67,3 +71,26 @@ if ( ! is_ajax() ) {
 if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_after_payment' );
 }
+?>
+<script>
+	$(function () {
+		'use strict';
+		
+		$('.click-payment').on('click', function() {
+			$(this).next('.payment_methods').addClass('active');
+		});
+		$('.wc_payment_method').on('click', function() {
+			$('.click-payment').text($(this).find('label').text());
+			$(this).parent('.payment_methods').removeClass('active');
+		});
+
+		$('.click-shipping').on('click', function() {
+			$(this).next('.woocommerce-shipping-methods').addClass('active');
+		});
+		$('.woocommerce-shipping-methods li').on('click', function() {
+			$('.click-shipping').text($(this).find('label').text());
+			$(this).parent('.woocommerce-shipping-methods').removeClass('active');
+		});
+
+	});
+</script>

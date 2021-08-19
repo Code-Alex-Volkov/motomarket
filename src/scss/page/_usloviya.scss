@@ -1,23 +1,5 @@
 .wrapper {
-	.main-condition {
-		padding-bottom: 20px;
-		@include fontRegular();
-		font-style: normal;
-		font-weight: normal;
-		font-size: 14px;
-		line-height: 130%;
-		display: flex;
-		align-items: center;
-		color: #F5F5F5;
-		a {
-			color: #F5F5F5;
-			padding-right: 5px;
-			&:hover {
-				color: #FACE50;
-				transition: all 0.3s ease; 
-			}
-		}
-	}
+	
 	.title-page {
 		@include fontRegular();
 		font-style: normal;
