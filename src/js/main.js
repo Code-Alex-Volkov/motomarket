@@ -1,14 +1,50 @@
 $(function () {
 	'use strict';
-	
-	$('.click-payment').on('click', function() {
-		console.log('+');
-		// $(this).parents('.payment_methods').addClass('active');
+
+	$('.input-focusin').focusout(function(){
+		$('#catalogfilter').submit();
+	});
+
+	$(document).on('click', '.category-box label', function() {
+		$(this).parents().find('form input[type="checkbox"]').prop("checked", false);
+	});
+
+	$(document).on('click', '.clear-btn', function() {
+		// $(this).parents().find('form')[0].reset();
+		$(this).parents().find('form input[type="radio"]').prop("checked", false);
+		$(this).parents().find('form input[type="checkbox"]').prop("checked", false);
+		$('.price-min').text($('.price-min').val());
+		$('.filter-box-cat').removeClass('active');
+		$('#catalogfilter').submit();
+
+	});
+
+	$('.product-type-variable .add_to_cart_button').on("click", function (event) {
+		event.preventDefault();
+	 });
+
+	$('.product.product-type-variable').find('.link-add-to-cart a').css('cursor', 'no-drop');
+
+	$('.mototehnika-click').on('click', function() {
+		$('.filter-box-cat').removeClass('active');
+		$('.filter-box-cat.mototehnika').addClass('active');
+	});
+	$('.snaryazhenie-click').on('click', function() {
+		$('.filter-box-cat').removeClass('active');
+		$('.filter-box-cat.snaryazhenie').addClass('active');
+	});
+	$('.zapchasti-click').on('click', function() {
+		$('.filter-box-cat').removeClass('active');
+		$('.filter-box-cat.zapchasti').addClass('active');
+	});
+	$('.masla-click').on('click', function() {
+		$('.filter-box-cat').removeClass('active');
+		$('.filter-box-cat.masla').addClass('active');
 	});
 
 	var timeout;
 	$('.woocommerce').on('change', '.qty', function () {
-		console.log('+');
+		// console.log('+');
 		if (timeout !== undefined) {
 			clearTimeout(timeout);
 		}
@@ -232,7 +268,7 @@ $(function () {
 
 
 	// добавить товар в корзину без перезагрузки страницы
-	$('.add_to_cart_button').on("click", async function (e) {
+	$('.product-type-simple .add_to_cart_button').on("click", async function (e) {
 		e.preventDefault();
 		$(this).parents('.product').find('.count-ok').show();
 		let request = await fetch(this.href);

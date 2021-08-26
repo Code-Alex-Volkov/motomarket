@@ -4,8 +4,8 @@
 		<div class="center-footer">
 			<ul>
 				<li class="<?php if( $slug == 'about-us' ){ echo 'menu-active'; } ?>"><a href="/about-us">О нас</a></li>
-				<li class="<?php if( $slug == 'payment' ){ echo 'menu-active'; } ?>"><a href="/payment">Оплата</a></li>
-				<li class="<?php if( $slug == 'delivery' ){ echo 'menu-active'; } ?>"><a href="/delivery">Доставка</a></li>
+				<li class="<?php if( $slug == 'oplata' ){ echo 'menu-active'; } ?>"><a href="/oplata">Оплата</a></li>
+				<li class="<?php if( $slug == 'dostavka' ){ echo 'menu-active'; } ?>"><a href="/dostavka">Доставка</a></li>
 				<li class="<?php if( $slug == 'warranty' ){ echo 'menu-active'; } ?>"><a href="/warranty">Гарантия и возврат</a></li>
 				<li class="<?php if( $slug == 'faq' ){ echo 'menu-active'; } ?>"><a href="/faq">Вопросы и ответы</a></li>
 				<li class="<?php if( $slug == 'contacts' ){ echo 'menu-active'; } ?>"><a href="/contacts">Контакты</a></li>

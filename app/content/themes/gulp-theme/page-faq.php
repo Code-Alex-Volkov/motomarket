@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="wrapper">
-	<div class="main-ask"><a href="#">Главная </a><span> - ВОПРОСЫ И ОТВЕТЫ</span></div>
+	<div class="main-ask"><a href="/">Главная </a><span> - ВОПРОСЫ И ОТВЕТЫ</span></div>
 	<div class="title-page"><?php the_title(); ?></div>
 	<div class="content-faq">
 		<div class="left-faq">

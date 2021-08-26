@@ -1,10 +1,13 @@
 <div class="menu-content">
 	<div class="item-box item-box-hover">
-		<a href="/mototehnika" class="menu-item">
-			<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-moto.svg" alt="icon"></span>
-			<span class="title">Мототехника</span>
-			<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
-		</a>
+		<form action="/catalog" method="POST" class="menu-item">
+			<button class="button-form">
+				<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-moto.svg" alt="icon"></span>
+				<span class="title">Мототехника</span>
+				<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
+			</button>
+			<input type="hidden" name="category" value="mototehnika">
+		</form>
 		<div class="item-sub-menu">
 			<a href="/motoczikly" class="menu-item-sub <?php if( $slug1 == 'motoczikly' ){ echo 'nav-active'; } ?>">
 				<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-moto_01.svg" alt="icon"></span>
@@ -29,11 +32,18 @@
 		</div>
 	</div>
 	<div class="item-box item-box-hover">
-		<a href="/snaryazhenie" class="menu-item">
-			<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-helmet.svg" alt="icon"></span>
-			<span class="title">Снаряжение</span>
-			<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
-		</a>
+		<form action="/catalog" method="POST" class="menu-item">
+			<button class="button-form">
+				<span class="icon">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-helmet.svg" alt="icon">
+				</span>
+				<span class="title">Снаряжение</span>
+				<span class="right-line">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon">
+				</span>
+			</button>
+			<input type="hidden" name="category" value="snaryazhenie">
+		</form>
 		<div class="item-sub-menu">
 			<a href="/motoshlemy" class="menu-item-sub menu-item-sub-two <?php if( $slug1 == 'motoshlemy' ){ echo 'nav-active'; } ?>">
 				<span class="title">Мотошлемы</span>
@@ -59,11 +69,14 @@
 		</div>
 	</div>
 	<div class="item-box item-box-hover">
-		<a href="/zapchasti" class="menu-item">
-			<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-spark.svg" alt="icon"></span>
-			<span class="title">Запчасти</span>
-			<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
-		</a>
+		<form action="/catalog" method="POST" class="menu-item">
+			<button class="button-form">
+				<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-spark.svg" alt="icon"></span>
+				<span class="title">Запчасти</span>
+				<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
+			</button>
+			<input type="hidden" name="category" value="zapchasti">
+		</form>
 		<div class="item-sub-menu">
 			<a href="/aksessuary" class="menu-item-sub menu-item-sub-two <?php if( $slug1 == 'aksessuary' ){ echo 'nav-active'; } ?>">
 				<span class="title">Аксессуары</span>
@@ -83,11 +96,14 @@
 		</div>
 	</div>
 	<div class="item-box item-box-hover">
-		<a href="/masla" class="menu-item">
-			<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-oil-bottle.svg" alt="icon"></span>
-			<span class="title">Масла</span>
-			<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
-		</a>
+		<form action="/catalog" method="POST" class="menu-item">
+			<button class="button-form">
+				<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-oil-bottle.svg" alt="icon"></span>
+				<span class="title">Масла</span>
+				<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
+			</button>
+			<input type="hidden" name="category" value="masla">
+		</form>
 		<div class="item-sub-menu">
 			<a href="/motornye-masla" class="menu-item-sub menu-item-sub-two <?php if( $slug1 == 'motornye-masla' ){ echo 'nav-active'; } ?>">
 				<span class="title">Моторные масла</span>
@@ -102,16 +118,20 @@
 	</div>
 	<div class="item-box item-box-no-hover">
 		<a href="/services" class="menu-item">
-			<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-service.svg" alt="icon"></span>
-			<span class="title">Сервис</span>
-			<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
+			<div class="button-form">
+				<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-service.svg" alt="icon"></span>
+				<span class="title">Сервис</span>
+				<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
+			</div>
 		</a>
 	</div>
 	<div class="item-box item-box-no-hover">
 		<a href="/sale" class="menu-item">
-			<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-sale.svg" alt="icon"></span>
-			<span class="title">Распродажа</span>
-			<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
+			<div class="button-form">
+				<span class="icon"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon_menu-sale.svg" alt="icon"></span>
+				<span class="title">Распродажа</span>
+				<span class="right-line"><img src="<?php echo get_template_directory_uri() ?>/assets/img/dirt-02.svg" alt="icon"></span>
+			</div>
 		</a>
 	</div>
 </div>

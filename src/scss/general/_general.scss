@@ -401,8 +401,6 @@ body {
 .main-condition {
 	padding-bottom: 20px;
 	@include fontRegular();
-	font-style: normal;
-	font-weight: normal;
 	font-size: 14px;
 	line-height: 130%;
 	display: flex;
@@ -413,7 +411,24 @@ body {
 		padding-right: 5px;
 		&:hover {
 			color: #FACE50;
-			transition: all 0.3s ease; 
+			transition: $transition; 
 		}
 	}
+	form {
+		button {
+			background-color: transparent;
+			@include fontRegular();
+			font-size: 14px;
+			line-height: 130%;
+			cursor: pointer;
+			color: #F5F5F5;
+			&:hover {
+				color: #FACE50;
+				transition: $transition; 
+			}
+		}
+	}
+}
+.text-upper {
+	text-transform: uppercase;
 }

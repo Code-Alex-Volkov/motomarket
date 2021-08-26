@@ -1,6 +1,6 @@
 <?php get_header(); ?>   
 <div class="wrapper">
-	<div class="main-condition"><a href="#">Главная </a><span> - КОНТАКТЫ</span></div>
+	<div class="main-condition"><a href="/">Главная </a><span> - КОНТАКТЫ</span></div>
 	<div class="title-page"><?php the_title(); ?></div>
 
 	<div class="contacts">

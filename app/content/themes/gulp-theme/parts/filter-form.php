@@ -5,33 +5,35 @@
 		$category = get_queried_object();
 		$current_cat_id = $category->term_id;
 		$current_cat_slug = $category->slug;
+		$catPOST = $_POST['category'];
+		$subCatPOST = $_POST['subcategory'];
 	?>
 
 	<!-- Старт Выбор категорий - checkbox -->
 	<div class="filter-box">
 		<div class="title-filter line">Категории</div>
-		<ul class="filter-ul">
-			<li class="filter-li">
+		<ul class="filter-ul category-box">
+			<li class="filter-li mototehnika-click" >
 				<label>
-					<input class="input-submit" type="radio" name="category" value="mototehnika" />
+					<input class="input-submit" type="radio" name="category" value="mototehnika" <?php if(!empty($catPOST) && $catPOST == 'mototehnika') { echo 'checked'; } ?> />
 					<span>Мототехника</span>
 				</label>
 			</li>
-			<li class="filter-li">
+			<li class="filter-li snaryazhenie-click">
 				<label>
-					<input class="input-submit" type="radio" name="category" value="snaryazhenie" />
+					<input class="input-submit" type="radio" name="category" value="snaryazhenie" <?php if(!empty($catPOST) && $catPOST == 'snaryazhenie') { echo 'checked'; } ?> />
 					<span>Снаряжение</span>
 				</label>
 			</li>
-			<li class="filter-li">
+			<li class="filter-li zapchasti-click">
 				<label>
-					<input class="input-submit" type="radio" name="category" value="zapchasti" />
+					<input class="input-submit" type="radio" name="category" value="zapchasti" <?php if(!empty($catPOST) && $catPOST == 'zapchasti') { echo 'checked'; } ?> />
 					<span>Запчасти</span>
 				</label>
 			</li>
-			<li class="filter-li">
+			<li class="filter-li masla-click">
 				<label>
-					<input class="input-submit" type="radio" name="category" value="masla" />
+					<input class="input-submit" type="radio" name="category" value="masla" <?php if(!empty($catPOST) && $catPOST == 'masla') { echo 'checked'; } ?> />
 					<span>Масла</span>
 				</label>
 			</li>
@@ -48,12 +50,12 @@
 	<div class="filter-box">
 		<div class="title-filter">Цена (руб.)</div>
 		<div class="price-box">
-			<input class="price-min input-submit" value="0">
-			<input class="price-max input-submit" value="150000">
+			<input type="text" class="price-min input-focusin" name="price_min" value="30">
+			<input type="text" class="price-max input-focusin" name="price_max" value="200000">
 		</div>
 		<div class="range-slider">
-			<input type="range" name="price_min"  class="input-submit" id="input-left" min="30" max="1500000" value="30" />
-			<input type="range" name="price_max"  class="input-submit" id="input-right" min="30" max="1500000" value="1500000" />
+			<input type="range" class="input-submit" id="input-left" min="30" max="200000" value="30" />
+			<input type="range" class="input-submit" id="input-right" min="30" max="200000" value="200000" />
 			<div class="slider">
 				<div class="track"></div>
 				<div class="range"></div>
@@ -64,46 +66,129 @@
 	</div>
 	<!-- Конец Ползунок выбора цен -->
 
-	<!-- Старт Выбор Бренда - checkbox (ACF - select)  -->
+	<!-- Старт Выбор Мототехника - checkbox -->
 	<?php
-		// Вывожу товары из текущей категории
-		$args = array('product_cat' => $current_cat_slug, 'post_type' => 'product', 'posts_per_page' => -1);
-		$loop = new WP_Query( $args );
-		$newArray = array();
-		while ( $loop->have_posts() ) : $loop->the_post();  
-			// Получаю значение чекбакса объём (мл) из каждого товара
-			$field = get_field('brend', get_the_ID());
-			$obyom_ml = $field;
-			// Проверка. Вывожу товар только с пометкой "В наличии" и заношу их в массив $newArray
-			if (!(get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock')) { $newArray[] = $obyom_ml; } 
-		endwhile; 
-		wp_reset_postdata();  
-		// Убрать дубликаты значений из массива $newArray
-		$result = array_unique($newArray);
-		// Сортирую массив в порядке возрастания с учетом цифр в названии
-		natsort($result);
-		if($result) {
-		echo '<div class="filter-box">';
-			echo '<div class="title-filter">Бренд</div>';
+		$term = get_term_by( 'slug', 'mototehnika', 'product_cat');
+		$parent_term_id = $term->term_id;
+		$sub_cats = get_terms( array(
+			'taxonomy' => 'product_cat',
+			'child_of' => $parent_term_id,
+			'hide_empty' => 0
+		) );
+		?>
+		<div class="filter-box filter-box-cat mototehnika <?php if( !empty($catPOST) && $catPOST == "mototehnika" ) { echo 'active'; } ?>">
+			<?php
+			echo '<div class="title-filter">Мототехника</div>';
 			echo '<ul class="filter-ul">';
-			// Вывожу отсортированный массив
-			foreach ($result as $key => $val) : 
-				if($val) : ?>
+			if( $sub_cats ){
+				foreach( $sub_cats as $cat ){ ?>
 					<li class="filter-li">
 						<label class="custom-checkbox">
-							<input class="input-submit" type="checkbox" name="brend[]" value="<?php echo $val; ?>" />
-							<span><?php echo $val; ?></span>
+							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" <?php if(!empty($subCatPOST) && $subCatPOST == $cat->slug) { echo 'checked'; } ?> />
+							<span><?php echo $cat->name; ?></span>
 						</label>
 					</li>
-					<?php 
-				endif;
-			endforeach; 
+				<?php }
+
+				wp_reset_postdata(); // сбрасываем глобальную переменную пост
+			}
 			echo '</ul>';
-			echo '<div class="click-filter-ul">Показать все</div>';
 		echo '</div>';
-		}
 	?>						
-	<!-- Конец Выбор Бренда - checkbox (ACF - select) -->
+	<!-- Конец Выбор Мототехника - checkbox -->
+
+	<!-- Старт Выбор Снаряжение - checkbox  -->
+	<?php
+		$term = get_term_by( 'slug', 'snaryazhenie', 'product_cat');
+		$parent_term_id = $term->term_id;
+		$sub_cats = get_terms( array(
+			'taxonomy' => 'product_cat',
+			'child_of' => $parent_term_id,
+			'hide_empty' => 0
+		) );
+		?>
+		<div class="filter-box filter-box-cat snaryazhenie <?php if( !empty($catPOST) && $catPOST == "snaryazhenie" ) { echo 'active'; } ?>">
+			<?php
+			echo '<div class="title-filter">Снаряжение</div>';
+			echo '<ul class="filter-ul">';
+			if( $sub_cats ){
+				foreach( $sub_cats as $cat ){ ?>
+					<li class="filter-li">
+						<label class="custom-checkbox">
+							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" />
+							<span><?php echo $cat->name; ?></span>
+						</label>
+					</li>
+				<?php }
+
+				wp_reset_postdata(); // сбрасываем глобальную переменную пост
+			}
+			echo '</ul>';
+		echo '</div>';
+	?>						
+	<!-- Конец Выбор Снаряжение - checkbox -->
+
+	<!-- Старт Выбор Запчасти - checkbox  -->
+	<?php
+		$term = get_term_by( 'slug', 'zapchasti', 'product_cat');
+		$parent_term_id = $term->term_id;
+		$sub_cats = get_terms( array(
+			'taxonomy' => 'product_cat',
+			'child_of' => $parent_term_id,
+			'hide_empty' => 0
+		) );
+		?>
+		<div class="filter-box filter-box-cat zapchasti <?php if( !empty($catPOST) && $catPOST == "zapchasti" ) { echo 'active'; } ?>">
+			<?php
+			echo '<div class="title-filter">Запчасти</div>';
+			echo '<ul class="filter-ul">';
+			if( $sub_cats ){
+				foreach( $sub_cats as $cat ){ ?>
+					<li class="filter-li">
+						<label class="custom-checkbox">
+							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" />
+							<span><?php echo $cat->name; ?></span>
+						</label>
+					</li>
+				<?php }
+
+				wp_reset_postdata(); // сбрасываем глобальную переменную пост
+			}
+			echo '</ul>';
+		echo '</div>';
+	?>						
+	<!-- Конец Выбор Запчасти - checkbox -->
+
+	<!-- Старт Выбор Масла - checkbox  -->
+	<?php
+		$term = get_term_by( 'slug', 'masla', 'product_cat');
+		$parent_term_id = $term->term_id;
+		$sub_cats = get_terms( array(
+			'taxonomy' => 'product_cat',
+			'child_of' => $parent_term_id,
+			'hide_empty' => 0
+		) );
+		?>
+		<div class="filter-box filter-box-cat masla <?php if( !empty($catPOST) && $catPOST == "masla" ) { echo 'active'; } ?>">
+			<?php
+			echo '<div class="title-filter">Масла</div>';
+			echo '<ul class="filter-ul">';
+			if( $sub_cats ){
+				foreach( $sub_cats as $cat ){ ?>
+					<li class="filter-li">
+						<label class="custom-checkbox">
+							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" />
+							<span><?php echo $cat->name; ?></span>
+						</label>
+					</li>
+				<?php }
+
+				wp_reset_postdata(); // сбрасываем глобальную переменную пост
+			}
+			echo '</ul>';
+		echo '</div>';
+	?>						
+	<!-- Конец Выбор Масла - checkbox -->
 
 	<div class="filter-box">
 		<div class="title-filter">Товары со скидкой</div>
@@ -158,9 +243,9 @@
 				</li>
 			</ul>
 		</div>
-		<div class="right">
+		<!-- <div class="right">
 			<div class="count-box">Показано 1- <span class="number-span"> 3</span> из <?php echo $wp_query->found_posts; ?> результатов</div>
-		</div>
+		</div> -->
 	</div>
 
 	<!-- Кнопка Применить фильтр -->

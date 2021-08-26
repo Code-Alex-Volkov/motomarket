@@ -357,3 +357,44 @@ button[name=update_cart] {
 	left: 0;
 	opacity: 0;
 }
+
+.cart-empty.woocommerce-info {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 30px;
+	font-size: 16px;
+	line-height: 130%;
+	letter-spacing: .02em;
+	color: #fff;
+	@include fontRegular();
+}
+.return-to-shop {
+	text-align: center;
+	margin-bottom: 50px;
+	a {
+		font-size: 16px;
+		line-height: 130%;
+		letter-spacing: .02em;
+		color: #fff;
+		@include fontBold();
+		padding: 9px 56px;
+		border: 1px solid #fff;
+		background-color: transparent;
+		transition: $transition;
+		display: inline-block;
+		box-sizing: border-box;
+		&:hover {
+			background-color: #fff;
+			transition: $transition;
+			color: #323534;
+		}
+	}
+}
+
+.woocommerce {
+	min-height: calc(100vh - 470px);
+}
+.page-id-8 {
+	display: flex;
+	flex-direction: column;
+}

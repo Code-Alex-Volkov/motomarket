@@ -13,7 +13,7 @@ require get_template_directory() . '/parts/catalog-loadmore.php';
 
 add_filter('show_admin_bar', '__return_false'); // отключить верхнюю панель администратора
 
-// Register Style And Scripts
+// Зарегистрировать скрипты и стили
 function gulp_scripts() {
   wp_enqueue_style( 'gulp-style', get_stylesheet_uri(), '1.1', true );
   wp_enqueue_style( 'gulp-main', get_template_directory_uri() . '/assets/main.min.css', '1.1', true );
@@ -23,8 +23,6 @@ function gulp_scripts() {
   wp_enqueue_script( 'jquery' );
 
   wp_enqueue_script( 'gulp-script', get_template_directory_uri() . '/assets/main.min.js', array(), '1.1', true );
-  // $flexslider = plugins_url('woocommerce/assets/js/flexslider/jquery.flexslider.min.js');
-  // wp_enqueue_script( 'flexslider-script', $flexslider, array(), '1.1', true );
 }
 // Добавить скрипты и стили на сайт
 add_action( 'wp_enqueue_scripts', 'gulp_scripts' );

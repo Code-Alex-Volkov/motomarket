@@ -51,8 +51,8 @@ if ( $product->is_in_stock() ) : ?>
 
 			<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 			<div class="box-link">
-				<a class="link-class" href="#">Как оплатить заказ?</a>
-				<a class="link-class" href="#">Как получить заказ?</a>
+				<a class="link-class" href="/oplata/">Как оплатить заказ?</a>
+				<a class="link-class" href="/dostavka/">Как получить заказ?</a>
 			</div>
 		</div>
 	</form>

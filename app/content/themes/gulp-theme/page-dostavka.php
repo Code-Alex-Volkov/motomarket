@@ -2,7 +2,7 @@
 
 
 <div class="wrapper" >
-	<div class="main-condition"><a href="#">Главная </a><span> - УСЛОВИЯ ДОСТАВКИ</span></div>
+	<div class="main-condition"><a href="/">Главная </a><span> - УСЛОВИЯ ДОСТАВКИ</span></div>
 	<div class="title-page"><?php the_title(); ?></div>
 
 	<div class="condition">

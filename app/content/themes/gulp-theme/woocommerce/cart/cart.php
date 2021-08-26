@@ -17,6 +17,7 @@
 
 defined( 'ABSPATH' ) || exit; ?>
 <div class="wrapper">
+	
 	<div class="main-condition"><a href="#">Главная </a><span> - КОРЗИНА</span></div>
 	<div class="box-title">
 		<div class="title-page"><?php the_title(); ?></div>
@@ -201,5 +202,4 @@ defined( 'ABSPATH' ) || exit; ?>
 		<?php do_action( 'woocommerce_cart_collaterals_alex' ); ?>
 	</div>
 
-	
 </div>

@@ -33,9 +33,35 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 
-	<div class="main-condition"><a href="/">Главная </a> - <a href="/catalog">  Каталог </a><span> - ОФОРМЛЕНИЕ ЗАКАЗА</span></div>
+	<?php 
+		$terms = get_the_terms( $post->cat_ID , 'product_cat' );
+		
+		$parentID = $terms[key($terms)]->parent;
+		$catName = get_the_category_by_ID( $parentID );
+		$term = get_term_by( 'name', $catName, 'product_cat');
+		$catSlug = $term->slug;
+		$subCatName = $terms[key($terms)]->name;
+		$subCatSlug = $terms[key($terms)]->slug;
+	?>
 
-		<?php while ( have_posts() ) : ?>
+	<div class="main-condition">
+		<a href="/">Главная</a>&nbsp;-&nbsp;
+		<a href="/catalog">Каталог</a>&nbsp;-&nbsp;
+
+		<form action="/catalog" method="POST" class="menu-item">
+			<button class="button-form"><?php echo $catName; ?></button>
+			<input type="hidden" name="category" value="<?php echo $catSlug; ?>">
+		</form>
+		&nbsp;-&nbsp;
+		<form action="/catalog" method="POST" class="menu-item">
+			<button class="button-form"><?php echo $subCatName; ?></button>
+			<input type="hidden" name="subcategory[]" value="<?php echo $subCatSlug; ?>">
+		</form>
+
+		<span class="text-upper"> - <?php the_title(); ?></span>
+	</div>
+		
+	<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
 
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>

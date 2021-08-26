@@ -80,27 +80,31 @@ function alex_catalogfilter_function(){
 		//$args['meta_query'][] = array( 'relation'=>'AND' ); // AND означает, что все условия meta_query должны выполняться
  
 	// если указаны и минимальная цена, и максимальная цена, мы будем использовать сравнение between
-	if( isset( $_POST['price_min'] ) && $_POST['price_min'] && isset( $_POST['price_max'] ) && $_POST['price_max'] ) {
+	$priceMin = $_POST['price_min'];
+	$priceMax = $_POST['price_max'];
+	$priceMin = str_replace(' ', '', $priceMin);
+	$priceMax = str_replace(' ', '', $priceMax);
+	if( isset( $priceMin ) && $priceMin && isset( $priceMax ) && $priceMax ) {
 		$args['meta_query'][] = array(
 			'key' => '_price',
-			'value' => array( $_POST['price_min'], $_POST['price_max'] ),
+			'value' => array( $priceMin, $priceMax ),
 			'type' => 'numeric',
 			'compare' => 'between'
 		);
 	} else {
 		// если установлена ​​только минимальная цена
-		if( isset( $_POST['price_min'] ) && $_POST['price_min'] )
+		if( isset( $priceMin ) && $priceMin )
 			$args['meta_query'][] = array(
 				'key' => '_price',
-				'value' => $_POST['price_min'],
+				'value' => $priceMin,
 				'type' => 'numeric',
 				'compare' => '>'
 			);
 		// если установлена ​​только максимальная цена
-		if( isset( $_POST['price_max'] ) && $_POST['price_max'] )
+		if( isset( $priceMax ) && $priceMax )
 			$args['meta_query'][] = array(
 				'key' => '_price',
-				'value' => $_POST['price_max'],
+				'value' => $priceMax,
 				'type' => 'numeric',
 				'compare' => '<'
 			);
@@ -115,19 +119,24 @@ function alex_catalogfilter_function(){
 			'field' => 'slug',
 			'terms' => $_POST['category']
 		);
+		// array_except($args, 'subcategory');
 	} else {
 		$args += ['post_type' => 'product'];
 	}
 	// Конец Сортировка Категорий
 
-	// Старт Сортировка Бренд (ACF - select)
-	if( isset( $_POST['brend'] ) )
-		$args['meta_query'][] = array(
-			'key' => 'brend',
-			'value' => $_POST['brend'],
-			'compare' => 'IN'
+	// Старт Сортировка Категорий
+	if( isset( $_POST['subcategory'] ) ) {
+		$args['tax_query'] = array( 'relation'=>'AND' ); // AND означает, что все условия tax_query должны выполняться
+		$args['tax_query'][] = array(
+			'taxonomy' => 'product_cat',
+			'field' => 'slug',
+			'terms' => $_POST['subcategory']
 		);
-	// Конец Сортировка Бренд (ACF - select)
+	} else {
+		$args += ['post_type' => 'product'];
+	}
+	// Конец Сортировка Категорий
 	
 	// Сортировка Наша рекомендация
 	if( isset( $_POST['saleproduct'] ) && $_POST['saleproduct'] == 'saleproduct' ) {
@@ -148,15 +157,26 @@ function alex_catalogfilter_function(){
 		);
 	}
 
-	// Проверить, что форма отправляет через ajax
-	echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
-	print_r($_POST);
-	echo '</pre>';
-	// Проверить, по каким параметрам будут выводиться товары
-	echo '<pre style="border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
-	print_r($args);
-	echo '</pre></div>';
+	// // Проверить, что форма отправляет через ajax
+	// echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
+	// print_r($priceMin);
+	// echo '</pre>';
+	// // Проверить, по каким параметрам будут выводиться товары
+	// echo '<pre style="border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
+	// print_r($priceMax);
+	// echo '</pre></div>';
 
+	$wp_query = new WP_Query( $args ); ?>
+
+	<div class="right">
+		<?php if($wp_query->found_posts == 0) { ?>
+			<div class="count-box">Товаров не найдено</div>
+		<?php } else { ?>
+			<div class="count-box">Показано 1- <span class="number-span"><?php if( $wp_query->found_posts < 3 ) { echo $wp_query->found_posts; } else { echo ' 3'; } ?></span> из <?php echo $wp_query->found_posts; ?> результатов</div>
+		<?php } ?>
+	</div>
+
+	<?php
 	// Старт Вывод отсортированных продуктов
 	query_posts( $args );
 	if( have_posts() ) :
@@ -166,7 +186,7 @@ function alex_catalogfilter_function(){
 	endif;
 	wp_reset_query();
 
-	$wp_query = new WP_Query( $args );
+	
 	if (  $wp_query->max_num_pages > 1 ) : ?>
 		
 		<script>

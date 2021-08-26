@@ -90,13 +90,13 @@ function alex_filter_function(){
 	// ЦОНЕЦ ОБЩИЕ ПАРАМЕТРЫ
 
 	// Проверить, что форма отправляет через ajax
-	echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
-	print_r($_POST);
-	echo '</pre>';
-	// Проверить, по каким параметрам будут выводиться товары
-	echo '<pre style="border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
-	print_r($args);
-	echo '</pre></div>';
+	// echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
+	// print_r($_POST);
+	// echo '</pre>';
+	// // Проверить, по каким параметрам будут выводиться товары
+	// echo '<pre style="border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
+	// print_r($args);
+	// echo '</pre></div>';
 
 	// Старт Вывод отсортированных продуктов
 	query_posts( $args );
