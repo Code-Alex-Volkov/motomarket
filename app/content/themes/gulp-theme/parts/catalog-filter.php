@@ -157,13 +157,21 @@ function alex_catalogfilter_function(){
 		);
 	}
 
-	// // Проверить, что форма отправляет через ajax
+	if( isset( $_POST['specials'] ) && $_POST['specials'] == 'on' ) {
+		$args['tax_query'][] = array(
+			'taxonomy' => 'product_visibility',
+			'field'    => 'name',
+			'terms'    => 'featured'
+		);
+	}
+
+	// Проверить, что форма отправляет через ajax
 	// echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
-	// print_r($priceMin);
+	// print_r($_POST);
 	// echo '</pre>';
 	// // Проверить, по каким параметрам будут выводиться товары
 	// echo '<pre style="border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
-	// print_r($priceMax);
+	// print_r($args);
 	// echo '</pre></div>';
 
 	$wp_query = new WP_Query( $args ); ?>
@@ -194,6 +202,7 @@ function alex_catalogfilter_function(){
 			var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
 			var max_pages = <?php echo $wp_query->max_num_pages; ?>;
 			var foundPosts = <?php echo $wp_query->found_posts; ?>;
+			var url = '/wp/wp-admin/admin-ajax.php';
 		</script>
 
 		<div class="btn" id="catalog_loadmore">

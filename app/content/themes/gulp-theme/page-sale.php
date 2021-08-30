@@ -78,8 +78,6 @@
 			<div class="count-box">Показано 1- <span class="number-span"> 4</span> из <?php echo $wp_query->found_posts; ?> результатов</div>
 		</div>
 
-		
-		
 		<!-- input value используется в filter.php -->
 		<input type="hidden" name="action" value="salefilter">
 	</form>

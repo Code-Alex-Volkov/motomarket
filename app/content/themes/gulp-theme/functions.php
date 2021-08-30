@@ -1,5 +1,13 @@
 <?php
 
+//Register Menu
+function theme_register_nav_menu() {
+	register_nav_menu( 'top', 'top' );
+}
+add_action( 'after_setup_theme', 'theme_register_nav_menu' );
+
+
+
 // Рaбота с AJAX
 require get_template_directory() . '/parts/sliderform.php';
 // Рaбота с AJAX
@@ -9,7 +17,8 @@ require get_template_directory() . '/parts/filter-archive.php';
 // Рaбота с AJAX
 require get_template_directory() . '/parts/load-product.php';
 require get_template_directory() . '/parts/catalog-loadmore.php';
-
+// Search AJAX
+require get_template_directory() . '/parts/search-ajax.php';
 
 add_filter('show_admin_bar', '__return_false'); // отключить верхнюю панель администратора
 
@@ -416,4 +425,31 @@ function truemisha_redirect_to_thank_you() {
 	}
 	wp_redirect( site_url( 'payment' ) ); // Название страницы, куда делать редирект
 	exit;
+}
+
+add_filter( 'wp_nav_menu_items', 'cody_add_search_box_to_menu', 10, 2 );
+function cody_add_search_box_to_menu( $items, $args ) {
+    if( $args->theme_location == 'top' )
+		$items .= '<li class="menu-item">' . get_search_form( false ) . '</li>';
+
+    return $items;
+}
+
+add_action( 'pre_get_posts', 'cody_search_filter' );
+function cody_search_filter( $query ){
+	if( ! is_admin() && $query->is_main_query() ){
+		if( $query->is_search ){
+			$query->set( 'sentence', 1 );
+		}
+	}
+}
+
+add_action( 'template_redirect', 'cody_redirect_single_post' );
+function cody_redirect_single_post() {
+	if ( !is_search() ) return;
+	
+	global $wp_query;
+	if ( $wp_query->post_count == 1 ) {
+		wp_redirect( get_permalink( $wp_query->posts['0']->ID ) );
+	}
 }

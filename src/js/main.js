@@ -1,19 +1,58 @@
 $(function () {
 	'use strict';
 
+	// if(window.location == 'http://fitkevich-food.freedomain.thehost.com.ua/sportpeet.html') {
+	// 	$('.input-submit').click(function() {
+	// 		window.location.href = "http://fitkevich-food.freedomain.thehost.com.ua/magazin";
+	// 	})
+	// }
+	if(window.location == "http://localhost:3000/catalog") {
+		$('.input-submit').on('click', function () {
+			$('#catalogfilter').submit();
+		});
+	}
+	
+
+	$('.search-field').keypress(function(eventObject){
+		var searchTerm = $(this).val();
+		// проверим, если в поле ввода более 2 символов, запускаем ajax
+		if(searchTerm.length > 2 ){
+			$.ajax({
+				url : '/wp/wp-admin/admin-ajax.php',
+				type: 'POST',
+				data:{
+					'action':'codyshop_ajax_search',
+					'term'  :searchTerm
+				},
+				success:function(result){
+					$('.codyshop-ajax-search').fadeIn().html(result);
+				}
+			});
+		} 
+	});
+
 	$('.input-focusin').focusout(function(){
 		$('#catalogfilter').submit();
 	});
 
 	$(document).on('click', '.category-box label', function() {
-		$(this).parents().find('form input[type="checkbox"]').prop("checked", false);
+		$(this).parents().find('form .filter-box-cat input[type="checkbox"]').prop("checked", false);
 	});
 
 	$(document).on('click', '.clear-btn', function() {
 		// $(this).parents().find('form')[0].reset();
 		$(this).parents().find('form input[type="radio"]').prop("checked", false);
 		$(this).parents().find('form input[type="checkbox"]').prop("checked", false);
-		$('.price-min').text($('.price-min').val());
+		$('.price-min').val($('#input-left').attr('min'));
+		$('#input-left').val($('#input-left').attr('min'));
+		$('.range').css('left', '0');
+		$('.thumb.left').css('left', '0');
+
+		$('.price-max').val($('#input-right').attr('max'));
+		$('#input-right').val($('#input-right').attr('max'));
+		$('.range').css('right', '0');
+		$('.thumb.right').css('right', '0');
+
 		$('.filter-box-cat').removeClass('active');
 		$('#catalogfilter').submit();
 
@@ -210,8 +249,6 @@ $(function () {
 		let productLength = $('#response').find('li.product').length;
 		let numberSpan = $('.number-span').text();
 		let prLength = foundPosts - productLength;
-		console.log(productLength);
-		console.log(numberSpan);
 
 		$.ajax({
 			url: url, // обработчик

@@ -51,11 +51,11 @@
 		<div class="title-filter">Цена (руб.)</div>
 		<div class="price-box">
 			<input type="text" class="price-min input-focusin" name="price_min" value="30">
-			<input type="text" class="price-max input-focusin" name="price_max" value="200000">
+			<input type="text" class="price-max input-focusin" name="price_max" value="190000">
 		</div>
 		<div class="range-slider">
-			<input type="range" class="input-submit" id="input-left" min="30" max="200000" value="30" />
-			<input type="range" class="input-submit" id="input-right" min="30" max="200000" value="200000" />
+			<input type="range" class="input-submit" id="input-left" min="30" max="200000" value="100" />
+			<input type="range" class="input-submit" id="input-right" min="30" max="200000" value="190000" />
 			<div class="slider">
 				<div class="track"></div>
 				<div class="range"></div>
@@ -84,7 +84,7 @@
 				foreach( $sub_cats as $cat ){ ?>
 					<li class="filter-li">
 						<label class="custom-checkbox">
-							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" <?php if(!empty($subCatPOST) && $subCatPOST == $cat->slug) { echo 'checked'; } ?> />
+							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" <?php if(!empty($subCatPOST) && $subCatPOST[0] == $cat->slug) { echo 'checked'; } ?> />
 							<span><?php echo $cat->name; ?></span>
 						</label>
 					</li>
@@ -115,7 +115,7 @@
 				foreach( $sub_cats as $cat ){ ?>
 					<li class="filter-li">
 						<label class="custom-checkbox">
-							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" />
+							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" <?php if(!empty($subCatPOST) && $subCatPOST[0] == $cat->slug) { echo 'checked'; } ?> />
 							<span><?php echo $cat->name; ?></span>
 						</label>
 					</li>
@@ -146,7 +146,7 @@
 				foreach( $sub_cats as $cat ){ ?>
 					<li class="filter-li">
 						<label class="custom-checkbox">
-							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" />
+							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" <?php if(!empty($subCatPOST) && $subCatPOST[0] == $cat->slug) { echo 'checked'; } ?> />
 							<span><?php echo $cat->name; ?></span>
 						</label>
 					</li>
@@ -177,7 +177,7 @@
 				foreach( $sub_cats as $cat ){ ?>
 					<li class="filter-li">
 						<label class="custom-checkbox">
-							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" />
+							<input class="input-submit" type="checkbox" name="subcategory[]" value="<?php echo $cat->slug; ?>" <?php if(!empty($subCatPOST) && $subCatPOST[0] == $cat->slug) { echo 'checked'; } ?> />
 							<span><?php echo $cat->name; ?></span>
 						</label>
 					</li>
@@ -201,7 +201,7 @@
 	<div class="filter-box">
 		<div class="title-filter">Спецпредложения</div>
 		<label class="custom-checkbox">
-			<input class="input-submit" type="checkbox" name="specials" value="specials" />
+			<input class="input-submit" type="checkbox" name="specials" />
 			<span>Да</span>
 		</label>
 	</div>
@@ -249,7 +249,7 @@
 	</div>
 
 	<!-- Кнопка Применить фильтр -->
-	<button class="filter-btn">Очистить фильтр</button>
+	<button class="clear-btn filter-btn">Очистить фильтр</button>
 	<!-- Кнопка Применить фильтр -->
 
 	<!-- input value используется в filter.php -->
