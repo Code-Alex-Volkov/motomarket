@@ -110,12 +110,12 @@ function alex_filter_function(){
 	$wp_query = new WP_Query( $args );
 	if (  $wp_query->max_num_pages > 1 ) : ?>
 		
-		<script>
+		<script> 
 			var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
 			var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
 			var max_pages = <?php echo $wp_query->max_num_pages; ?>;
 			var foundPosts = <?php echo $wp_query->found_posts; ?>;
-			var url = '/wp/wp-admin/admin-ajax.php';
+			var url = "<?php echo site_url() . '/wp-admin/admin-ajax.php'; ?>";
 		</script>
 
 		<div class="btn" id="true_loadmore">

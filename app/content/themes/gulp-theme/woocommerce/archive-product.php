@@ -117,10 +117,8 @@ do_action( 'woocommerce_before_main_content' );
 							var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
 							var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
 							var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
-							var url = '/wp/wp-admin/admin-ajax.php';
+							var url = "<?php echo get_site_url() . '/wp-admin/admin-ajax.php'; ?>";
 							var foundPosts = <?php echo $wp_query->found_posts; ?>;
-
-							console.log(foundPosts);
 						</script>
 						<?php
 							query_posts( $args );

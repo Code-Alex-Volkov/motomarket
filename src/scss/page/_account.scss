@@ -7,6 +7,11 @@
 		.basket-btn {
 			display: flex;
 			align-items: center;
+			&.active {
+				span {
+					color: #FACE50;
+				}
+			}
 			&:not(:last-child) {
 				margin-bottom: 25px;
 			}
@@ -23,6 +28,22 @@
 	}
 	.right-box {
 		width: 420px;
+		&.active {
+			width: 700px;
+			.woocommerce-orders-table__row {
+				height: 40px;
+				line-height: 40px;
+				a {
+					color: #C99606;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			.shop_table thead th {
+				text-align: left;
+			}
+		}
 		.u-column-content {
 			background-color: #494949;
 			padding: 50px 40px;
@@ -43,6 +64,9 @@
 				color: #FFFFFF;
 				@include fontSemiBold();
 				margin-bottom: 10px;
+				&.title-edit {
+					margin-bottom: 30px;
+				}
 			}
 			.subtitle {
 				font-size: 16px;
@@ -199,6 +223,16 @@
 	line-height: 20px;
 	color: #FFFFFF;
 	@include fontRegular();
+	> p {
+		a {
+			color:#FACE50;
+			text-decoration: underline;
+			&:hover {
+				color: #FACE50;
+				text-decoration: none;
+			}
+		}
+	}
 }
 .class-password {
 	font-size: 12px;

@@ -18,20 +18,21 @@
 defined( 'ABSPATH' ) || exit; ?>
 
 <div class="wrapper">
+
 	<div class="main-condition">
 		<a href="/">Главная</a>&nbsp;-&nbsp;
 		<span>ЛИЧНЫЙ КАБИНЕТ</span>
 	</div>
 
 	<div class="wrapper-account">
-
+		<?php $url = basename(((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>
 		<div class="left-box">
 			<?php global $woocommerce; ?>
-			<a class="basket-btn" href="/my-account/edit-account/">
+			<a class="basket-btn<?php if($url == 'edit-account') { echo ' active'; } ?>" href="/my-account/edit-account/">
 				<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-account-user.svg" alt="cart">
 				<span class="basket-btn-counter">Профиль</span>
 			</a>
-			<a class="basket-btn" href="/my-account/orders/">
+			<a class="basket-btn<?php if($url == 'orders') { echo ' active'; } ?>" href="/my-account/orders/">
 				<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-account-listorder.svg" alt="cart">
 				<span class="basket-btn-counter">Мои заказы</span>
 			</a>
@@ -54,10 +55,9 @@ defined( 'ABSPATH' ) || exit; ?>
 			</a>
 		</div>
 
-		<div class="right-box">
-
+		<div class="right-box<?php if($url == 'orders') { echo ' active'; } ?>">
+		
 			<div class="woocommerce-MyAccount-content">
-				
 				<?php
 					/**
 					 * My Account content.
@@ -66,7 +66,6 @@ defined( 'ABSPATH' ) || exit; ?>
 					 */
 					do_action( 'woocommerce_account_content' );
 				?>
-
 			</div>
 
 		</div>

@@ -202,7 +202,7 @@ function alex_catalogfilter_function(){
 			var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
 			var max_pages = <?php echo $wp_query->max_num_pages; ?>;
 			var foundPosts = <?php echo $wp_query->found_posts; ?>;
-			var url = '/wp/wp-admin/admin-ajax.php';
+			var url = "<?php echo get_site_url() . '/wp-admin/admin-ajax.php'; ?>";
 		</script>
 
 		<div class="btn" id="catalog_loadmore">

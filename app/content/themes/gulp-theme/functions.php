@@ -11,12 +11,10 @@ require get_template_directory() . '/parts/sliderform.php';
 // Рaбота с AJAX
 require get_template_directory() . '/parts/filter.php';
 require get_template_directory() . '/parts/catalog-filter.php';
-require get_template_directory() . '/parts/filter-archive.php';
 // Рaбота с AJAX
 require get_template_directory() . '/parts/load-product.php';
 require get_template_directory() . '/parts/catalog-loadmore.php';
 // Search AJAX
-require get_template_directory() . '/parts/search-ajax.php';
 
 add_filter('show_admin_bar', '__return_false'); // отключить верхнюю панель администратора
 

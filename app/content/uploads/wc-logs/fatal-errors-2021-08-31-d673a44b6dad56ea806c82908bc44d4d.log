@@ -1,0 +1,163 @@
+2021-08-31T05:43:00+00:00 CRITICAL Uncaught Error: Call to undefined function http://motomarket.loc/my-account/() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php:58
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(3 в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 58
+
+2021-08-31T05:44:56+00:00 CRITICAL syntax error, unexpected '?>' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\filter.php на строке 118
+
+2021-08-31T05:45:25+00:00 CRITICAL syntax error, unexpected ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\filter.php на строке 118
+
+2021-08-31T05:46:17+00:00 CRITICAL require(): Failed opening required 'E:\OSPanel\domains\motomarket.loc\app/content/themes/gulp-theme/parts/filter-archive.php' (include_path='.') в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 14
+
+2021-08-31T05:48:17+00:00 CRITICAL require(): Failed opening required 'E:\OSPanel\domains\motomarket.loc\app/content/themes/gulp-theme/parts/filter-archive.php' (include_path='.') в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 14
+
+2021-08-31T05:48:50+00:00 CRITICAL require(): Failed opening required 'E:\OSPanel\domains\motomarket.loc\app/content/themes/gulp-theme/parts/filter-archive.php' (include_path='.') в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 14
+
+2021-08-31T05:48:51+00:00 CRITICAL require(): Failed opening required 'E:\OSPanel\domains\motomarket.loc\app/content/themes/gulp-theme/parts/filter-archive.php' (include_path='.') в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 14
+
+2021-08-31T05:59:51+00:00 CRITICAL syntax error, unexpected ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T05:59:52+00:00 CRITICAL syntax error, unexpected ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T06:00:08+00:00 CRITICAL syntax error, unexpected ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T06:00:16+00:00 CRITICAL syntax error, unexpected ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T06:00:21+00:00 CRITICAL Uncaught Error: Call to undefined function get_site_urlbasename() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php:59
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(356): WC_Short в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T06:00:29+00:00 CRITICAL syntax error, unexpected 'basename' (T_STRING) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T06:00:30+00:00 CRITICAL syntax error, unexpected 'basename' (T_STRING) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T06:01:33+00:00 CRITICAL syntax error, unexpected ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T06:01:37+00:00 CRITICAL syntax error, unexpected ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 59
+
+2021-08-31T06:03:59+00:00 CRITICAL syntax error, unexpected '?>', expecting '(' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 37
+
+2021-08-31T06:04:01+00:00 CRITICAL syntax error, unexpected ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 37
+
+2021-08-31T06:04:12+00:00 CRITICAL syntax error, unexpected '}' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 37
+
+2021-08-31T06:04:14+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 37
+
+2021-08-31T06:14:10+00:00 CRITICAL syntax error, unexpected ';' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 32
+
+2021-08-31T06:14:12+00:00 CRITICAL syntax error, unexpected ')', expecting variable (T_VARIABLE) or '{' or '$' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 32
+
+2021-08-31T06:21:14+00:00 CRITICAL syntax error, unexpected '/' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 35
+
+2021-08-31T06:21:16+00:00 CRITICAL syntax error, unexpected '<' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 34
+
+2021-08-31T06:21:17+00:00 CRITICAL syntax error, unexpected '<' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 34
+
+2021-08-31T06:21:24+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 34
+
+2021-08-31T06:21:27+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 34
+
+2021-08-31T06:21:28+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 34
+
+2021-08-31T06:21:30+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 34
+
+2021-08-31T06:21:32+00:00 CRITICAL syntax error, unexpected '/' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 35
+
+2021-08-31T06:21:46+00:00 CRITICAL syntax error, unexpected '"' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 34
+
+2021-08-31T06:23:23+00:00 CRITICAL syntax error, unexpected 'var' (T_VAR), expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 37
+
+2021-08-31T06:23:26+00:00 CRITICAL syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 37
+
+2021-08-31T06:25:13+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_endpoint_url(), 0 passed in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php on line 34 and at least 1 expected in E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-page-functions.php:88
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php(34): wc_get_endpoint_url()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerc в E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-page-functions.php на строке 88
+
+2021-08-31T06:25:20+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function esc_url(), 0 passed in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php on line 34 and at least 1 expected in E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\formatting.php:4308
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php(34): esc_url()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcod в E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\formatting.php на строке 4308
+
+2021-08-31T06:25:23+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_endpoint_url(), 0 passed in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php on line 34 and at least 1 expected in E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-page-functions.php:88
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php(34): wc_get_endpoint_url()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerc в E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-page-functions.php на строке 88
+
+2021-08-31T06:25:29+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_endpoint_url(), 0 passed in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php on line 34 and at least 1 expected in E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-page-functions.php:88
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php(34): wc_get_endpoint_url()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerc в E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-page-functions.php на строке 88
+
+2021-08-31T06:26:31+00:00 CRITICAL Uncaught Error: Call to undefined function пуе_the_permalink() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php:29
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(356): WC_Short в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 29
+
+2021-08-31T06:27:11+00:00 CRITICAL syntax error, unexpected ';', expecting ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 29
+
+2021-08-31T06:28:53+00:00 CRITICAL Uncaught Error: Call to undefined function current_page_url() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php:29
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(356): WC_Shortcode в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 29
+
+2021-08-31T06:29:04+00:00 CRITICAL Uncaught Error: Call to undefined function current_page_url() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php:29
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 E:\OSPanel\domains\motomarket.loc\app\content\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\shortcodes.php(356): WC_Shortcode в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 29
+
+2021-08-31T06:40:14+00:00 CRITICAL syntax error, unexpected ';', expecting ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\my-account.php на строке 29
+
+2021-08-31T08:28:54+00:00 CRITICAL syntax error, unexpected '?>', expecting '(' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 32
+
+2021-08-31T08:28:56+00:00 CRITICAL syntax error, unexpected ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 32
+
+2021-08-31T08:29:01+00:00 CRITICAL syntax error, unexpected ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 32
+
+2021-08-31T08:29:05+00:00 CRITICAL syntax error, unexpected ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 32
+
+2021-08-31T08:29:24+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 34
+
+2021-08-31T08:29:52+00:00 CRITICAL syntax error, unexpected '=' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 30
+
+2021-08-31T08:29:53+00:00 CRITICAL syntax error, unexpected '=' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 30
+
+2021-08-31T08:29:53+00:00 CRITICAL syntax error, unexpected '=' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 30
+
+2021-08-31T08:30:00+00:00 CRITICAL syntax error, unexpected ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 30
+
+2021-08-31T08:31:07+00:00 CRITICAL syntax error, unexpected '}' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\myaccount\orders.php на строке 32
+

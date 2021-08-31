@@ -102,7 +102,7 @@ input[type=password] {
 	font-size: 12px;
 	line-height: 140%;
 	color: #A6A6A6;
-	@include fontBold();
+	@include fontRegular();
 	width: 310px;
 	margin: 0 auto;
 	margin-bottom: 50px;
@@ -110,7 +110,7 @@ input[type=password] {
 		font-size: 12px;
 		line-height: 140%;
 		color: #A6A6A6;
-		@include fontBold();
+		@include fontRegular();
 		position: relative;
 		&:before {
 			content: '';

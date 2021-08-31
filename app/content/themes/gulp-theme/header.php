@@ -9,7 +9,7 @@
 
 <body <?php body_class(); ?>>
 
-<?php $slug = basename(get_permalink()); ?>
+<?php $slug = basename( get_permalink() ); ?>
 
 <header class="header">
 	<div class="wrapper">

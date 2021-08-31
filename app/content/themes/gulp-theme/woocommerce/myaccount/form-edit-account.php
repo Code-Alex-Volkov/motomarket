@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit; ?>
 <div class="u-column-content">
-
+<h2 class="title title-edit"><?php esc_html_e( 'Профиль', 'woocommerce' ); ?></h2>
 <?php do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
