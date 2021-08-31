@@ -52,12 +52,12 @@
 				</div>
 			</div>
 			<div class="right">
-				<div class="search <?php if( is_search() ) { echo 'dgwt-wcas-active-search'; } ?>">
+				<div class="search <?php if( is_search() ) { echo 'active'; } ?>">
 					<?php echo do_shortcode('[fibosearch]'); ?>
 				</div>
 				<div class="account">
-					<a href="/404/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-login.svg" alt="login"></a>
-					<!-- <a href="/my-account/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-login.svg" alt="login"></a> -->
+					<!-- <a href="/404/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-login.svg" alt="login"></a> -->
+					<a href="/my-account/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-login.svg" alt="login"></a>
 				</div>
 				<div class="cart-box">
 					<?php global $woocommerce; ?>

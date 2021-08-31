@@ -6,8 +6,6 @@ function theme_register_nav_menu() {
 }
 add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 
-
-
 // Рaбота с AJAX
 require get_template_directory() . '/parts/sliderform.php';
 // Рaбота с AJAX
@@ -453,3 +451,16 @@ function cody_redirect_single_post() {
 		wp_redirect( get_permalink( $wp_query->posts['0']->ID ) );
 	}
 }
+
+/**
+ * Action to save additional user account details.
+ */
+function woocommerce_save_account_details_action() {
+  $user_id = wp_get_current_user()->ID;
+  if ( 0 !== $user_id ) {
+      $account_phone = ! empty( $_POST['account_phone'] ) ? wc_clean( $_POST['account_phone'] ) : '';
+      update_user_meta( $user_id, 'billing_phone', $account_phone );
+  }
+}
+
+add_action( 'woocommerce_save_account_details', 'woocommerce_save_account_details_action' );

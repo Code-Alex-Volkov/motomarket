@@ -1,16 +1,23 @@
 $(function () {
 	'use strict';
 
-	// if(window.location == 'http://fitkevich-food.freedomain.thehost.com.ua/sportpeet.html') {
-	// 	$('.input-submit').click(function() {
-	// 		window.location.href = "http://fitkevich-food.freedomain.thehost.com.ua/magazin";
-	// 	})
+
+	$('.log-reg').on('click', function() {
+		$('.u-column1').css('display', 'none');
+		$('.u-column2').css('display', 'block');
+	});
+
+	$('.log-in').on('click', function() {
+		$('.u-column1').css('display', 'block');
+		$('.u-column2').css('display', 'none');
+	});
+	
+
+	// if(window.location == "http://localhost:3000/catalog") {
+	// 	$('.input-submit').on('click', function () {
+	// 		$('#catalogfilter').submit();
+	// 	});
 	// }
-	if(window.location == "http://localhost:3000/catalog") {
-		$('.input-submit').on('click', function () {
-			$('#catalogfilter').submit();
-		});
-	}
 	
 
 	$('.search-field').keypress(function(eventObject){
