@@ -1,6 +1,6 @@
 <ul class="instagram-box">
     <?
-        $token = 'IGQVJWaUtqaUl2X1dta01yX2tGc2lqYW9jcmQ2T2RZAcWFZAYkp2bHpFWlF4TzNOM0NXd2w5Ym9vSzZA6NmpZATTFhbmUyME81NEoxVThfazhHNWlFUWJXVGN5U09GOUItZA1ZAVNzFSTUd3VV92WXdUbDZAhXwZDZD';
+        $token = 'IGQVJXMzJRQk5tSjllYXE2RHJ0OVdqOXJKNHJONVdaclhxeFJUTnJDLWh2b1hEek9UQjJkZAjVrUE42NVlDVDlPWGRhb3RLUlg1WjFjYU5Fd2J2cTZAhWGVMeExrM2lzNl9kUlk0b0t0SjFnZAmdQSkxldwZDZD';
         $inst = new Instagram($token);
         $instPosts = $inst->getInstagramPosts();
         $numbersPosts = 4;

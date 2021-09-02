@@ -16,9 +16,9 @@
 				<span>&copy; <script>document.write(`${new Date().getFullYear()}`);</script> Все права защищены.</span>
 			</div>
 			<div class="item-footer">
-				<a href="/404/">Пользовательское соглашение</a>
+				<a href="<?php the_field('politika', 'option'); ?>" target="_blank">Пользовательское соглашение</a>
 				<a href="/404/">Договор оферты</a>
-				<a href="/404/">Обратная связь</a>
+				<button class="popup-open-feedback">Обратная связь</button>
 			</div>
 			<div class="item-footer">
 				<ul class="social">

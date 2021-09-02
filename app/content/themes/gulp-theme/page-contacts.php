@@ -9,7 +9,7 @@
 			<?php the_content(); ?>
 			<div class="block">
 				<div class="item">
-					<div class="title">Время работы:</div>
+					<div class="title">Время работы bfjhfjgd:</div>
 					<div class="text"><?php the_field('work-time'); ?></div>
 				</div>
 				<div class="item">

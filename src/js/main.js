@@ -11,32 +11,6 @@ $(function () {
 		$('.u-column1').css('display', 'block');
 		$('.u-column2').css('display', 'none');
 	});
-	
-
-	// if(window.location == "http://localhost:3000/catalog") {
-	// 	$('.input-submit').on('click', function () {
-	// 		$('#catalogfilter').submit();
-	// 	});
-	// }
-	
-
-	$('.search-field').keypress(function(eventObject){
-		var searchTerm = $(this).val();
-		// проверим, если в поле ввода более 2 символов, запускаем ajax
-		if(searchTerm.length > 2 ){
-			$.ajax({
-				url : '/wp/wp-admin/admin-ajax.php',
-				type: 'POST',
-				data:{
-					'action':'codyshop_ajax_search',
-					'term'  :searchTerm
-				},
-				success:function(result){
-					$('.codyshop-ajax-search').fadeIn().html(result);
-				}
-			});
-		} 
-	});
 
 	$('.input-focusin').focusout(function(){
 		$('#catalogfilter').submit();
@@ -47,7 +21,6 @@ $(function () {
 	});
 
 	$(document).on('click', '.clear-btn', function() {
-		// $(this).parents().find('form')[0].reset();
 		$(this).parents().find('form input[type="radio"]').prop("checked", false);
 		$(this).parents().find('form input[type="checkbox"]').prop("checked", false);
 		$('.price-min').val($('#input-left').attr('min'));
@@ -327,6 +300,7 @@ $(function () {
 
 	document.addEventListener('wpcf7mailsent', function (event) {
 		$('.popup-modal').fadeOut(400);
+		$('.popup-feedback').fadeOut(400);
 		$(".popup-ok").fadeIn(400);
 	}, false);
 
@@ -334,13 +308,17 @@ $(function () {
 		$("body").addClass("overhidden");
 		$('.popup-modal').fadeIn(300);
 	});
+	$('.popup-open-feedback').on('click', function () {
+		$("body").addClass("overhidden");
+		$('.popup-feedback').fadeIn(300);
+	});
 	$('.popup-close').on('click', function () {
 		$("body").removeClass("overhidden");
 		$('.popup').fadeOut(300);
 	});
 
 	$(document).on('click', function (event) {
-		if (!$(event.target).closest(".popup-open, .popup-content").length) {
+		if (!$(event.target).closest(".popup-open, .popup-open-feedback, .popup-content").length) {
 			$("body").find(".popup").fadeOut(400);
 			$("body").removeClass("overhidden");
 		}

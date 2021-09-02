@@ -87,6 +87,23 @@
 					margin-right: 30px;
 				}
 			}
+			button{
+				font-size: 12px;
+				line-height: 130%;
+				@include fontRegular();
+				color: #A6A6A6;
+				transition: $transition;
+				display: inline-block;
+				background-color: transparent;
+				cursor: pointer;
+				&:hover {
+					color: #FACE50;
+					transition: $transition;
+				}
+				&:not(:last-child) {
+					margin-right: 30px;
+				}
+			}
 			.social {
 				justify-content: flex-end;
 				li {
