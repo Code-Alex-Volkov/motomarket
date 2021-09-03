@@ -12,7 +12,7 @@
 <?php $slug = basename( get_permalink() ); ?>
 
 <header class="header">
-	<div class="wrapper">
+	<div class="wrapper wrapper-top-header">
 		<div class="top-header">
 			<div class="left">
 				<ul class="top-left-menu">
@@ -56,7 +56,6 @@
 					<?php echo do_shortcode('[fibosearch]'); ?>
 				</div>
 				<div class="account">
-					<!-- <a href="/404/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-login.svg" alt="login"></a> -->
 					<a href="/my-account/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-login.svg" alt="login"></a>
 				</div>
 				<div class="cart-box">
@@ -74,6 +73,36 @@
 						<img src="<?php echo get_template_directory_uri() ?>/assets/img/add_to_cart.svg" alt="cart">
 					</a>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper-header-mobile">
+		<div class="wrapper top">
+			<div class="btn-menu">
+4545
+			</div>
+			<div class="logo">
+				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo_MMM.svg" alt="Logo"></a>
+			</div>
+			<div class="cart-box">
+				<?php global $woocommerce; ?>
+				<span class="basket-btn-counter">
+					<?php 
+						if($woocommerce->cart->cart_contents_count) { 
+							echo sprintf($woocommerce->cart->cart_contents_count);
+						} else { 
+							echo '0';
+						}
+					?>
+				</span>
+				<a class="basket-btn" href="<?php echo esc_url( wc_get_cart_url() );?>">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/img/add_to_cart.svg" alt="cart">
+				</a>
+			</div>
+		</div>
+		<div class="wrapper bottom">
+			<div class="search <?php if( is_search() ) { echo 'active'; } ?>">
+				<?php echo do_shortcode('[fibosearch]'); ?>
 			</div>
 		</div>
 	</div>

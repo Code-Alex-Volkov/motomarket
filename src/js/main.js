@@ -7,27 +7,36 @@ $(function () {
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 576,
+				settings: {
+					arrows: false,
+				}
+			}
+		]
+
 	});
 
-	$('.log-reg').on('click', function() {
+	$('.log-reg').on('click', function () {
 		$('.u-column1').css('display', 'none');
 		$('.u-column2').css('display', 'block');
 	});
 
-	$('.log-in').on('click', function() {
+	$('.log-in').on('click', function () {
 		$('.u-column1').css('display', 'block');
 		$('.u-column2').css('display', 'none');
 	});
 
-	$('.input-focusin').focusout(function(){
+	$('.input-focusin').focusout(function () {
 		$('#catalogfilter').submit();
 	});
 
-	$(document).on('click', '.category-box label', function() {
+	$(document).on('click', '.category-box label', function () {
 		$(this).parents().find('form .filter-box-cat input[type="checkbox"]').prop("checked", false);
 	});
 
-	$(document).on('click', '.clear-btn', function() {
+	$(document).on('click', '.clear-btn', function () {
 		$(this).parents().find('form input[type="radio"]').prop("checked", false);
 		$(this).parents().find('form input[type="checkbox"]').prop("checked", false);
 		$('.price-min').val($('#input-left').attr('min'));
@@ -47,23 +56,23 @@ $(function () {
 
 	$('.product-type-variable .add_to_cart_button').on("click", function (event) {
 		event.preventDefault();
-	 });
+	});
 
 	$('.product.product-type-variable').find('.link-add-to-cart a').css('cursor', 'no-drop');
 
-	$('.mototehnika-click').on('click', function() {
+	$('.mototehnika-click').on('click', function () {
 		$('.filter-box-cat').removeClass('active');
 		$('.filter-box-cat.mototehnika').addClass('active');
 	});
-	$('.snaryazhenie-click').on('click', function() {
+	$('.snaryazhenie-click').on('click', function () {
 		$('.filter-box-cat').removeClass('active');
 		$('.filter-box-cat.snaryazhenie').addClass('active');
 	});
-	$('.zapchasti-click').on('click', function() {
+	$('.zapchasti-click').on('click', function () {
 		$('.filter-box-cat').removeClass('active');
 		$('.filter-box-cat.zapchasti').addClass('active');
 	});
-	$('.masla-click').on('click', function() {
+	$('.masla-click').on('click', function () {
 		$('.filter-box-cat').removeClass('active');
 		$('.filter-box-cat.masla').addClass('active');
 	});
@@ -81,10 +90,10 @@ $(function () {
 
 	$('.cross-sells > h2').text('Вам будут интересны');
 
-	$('.radio-salefilter').on('click', function() {
+	$('.radio-salefilter').on('click', function () {
 		$(this).parents('.select-class').addClass('active');
 	});
-	$('.option-class label').on('click', function() {
+	$('.option-class label').on('click', function () {
 		let spanText = $(this).find('span').text();
 		$(this).parents('.select-class').find('.radio-salefilter').text(spanText);
 		$(this).parents('.select-class').removeClass('active');
@@ -195,7 +204,7 @@ $(function () {
 			'query': true_posts,
 			'page': current_page
 		};
-		
+
 		let productLength = $('#response').find('li.product').length;
 		let numberSpan = $('.number-span').text();
 		let prLength = foundPosts - productLength;
@@ -208,15 +217,15 @@ $(function () {
 					$('#true_loadmore').html('<button class="show_more btn_click"><span class="btn_text">Показать еще</span></button>').before(data); // вставляем новые посты
 					current_page++; // увеличиваем номер страницы на единицу
 					// let math = Math.floor(data.length / 2936);
-					
+
 					// let numberSpan = $('.number-span').text();
-					
+
 					if (current_page == max_pages) $("#true_loadmore").remove(); // если последняя страница, удаляем кнопку
 				} else {
 					$('#true_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
 				}
-				
-				if( prLength < 4 ) {
+
+				if (prLength < 4) {
 					$('.number-span').text(parseInt(numberSpan) + prLength);
 				} else {
 					$('.number-span').text(parseInt(numberSpan) + 4);
@@ -232,7 +241,7 @@ $(function () {
 			'query': true_posts,
 			'page': current_page
 		};
-		
+
 		let productLength = $('#response').find('li.product').length;
 		let numberSpan = $('.number-span').text();
 		let prLength = foundPosts - productLength;
@@ -249,7 +258,7 @@ $(function () {
 				} else {
 					$('#catalog_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
 				}
-				if( prLength < 3 ) {
+				if (prLength < 3) {
 					$('.number-span').text(parseInt(numberSpan) + prLength);
 				} else {
 					$('.number-span').text(parseInt(numberSpan) + 3);
@@ -341,7 +350,15 @@ $(function () {
 			slidesToScroll: 1,
 			appendArrows: $(".slider-navigation"),
 			prevArrow: '<buttom class="slick-prev"><span class="arr"></span></buttom>',
-			nextArrow: '<buttom class="slick-next"><span class="arr"></span></buttom>'
+			nextArrow: '<buttom class="slick-next"><span class="arr"></span></buttom>',
+			responsive: [
+				{
+					breakpoint: 576,
+					settings: {
+						arrows: false,
+					}
+				}
+			]
 		}
 	}
 	$(".slider-tab").not('.slick-initialized').slick(getSliderSettings());
@@ -373,7 +390,7 @@ $(function () {
 		return false;
 	});
 
-	
+
 
 	$(".item-box-hover").hover(function () {
 		$(this).addClass('active');
@@ -401,9 +418,23 @@ $(function () {
 		autoplay: true,
 		autoplaySpeed: 700000000,
 		dots: true,
-		infinite: true,
-		slidesToShow: 2,
-		slidesToScroll: 1
+		rows: 2,
+		arrows: true,
+		infinite: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 576,
+				settings: {
+					arrows: false,
+					rows: 2,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+				}
+			}
+		]
 	});
 
 	$('.slick-prev').html('<span class="arr"></span>');

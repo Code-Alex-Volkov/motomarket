@@ -27,6 +27,8 @@ function gulp_scripts() {
   wp_register_script( 'jquery', get_template_directory_uri() . '/assets/jquery.min.js', false, null, true );
   wp_enqueue_script( 'jquery' );
 
+  wp_enqueue_script( 'slick-script', get_template_directory_uri() . '/assets/slick.js', array(), '1.1', true );
+
   wp_enqueue_script( 'gulp-script', get_template_directory_uri() . '/assets/main.min.js', array(), '1.1', true );
 }
 // Добавить скрипты и стили на сайт

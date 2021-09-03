@@ -54,6 +54,7 @@
 			<div class="title">Снаряжение</div>
 			<div class="tabs-nav">
 				<img class="motoman" src="<?php echo get_template_directory_uri() ?>/assets/img/motoman.png" alt="motoman">
+				<img class="motoman-mobile" src="<?php echo get_template_directory_uri() ?>/assets/img/motoman-mobile.png" alt="motoman-mobile">
 				<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="sliderform">
 					
 					<ul class="nav">

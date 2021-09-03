@@ -26,7 +26,7 @@ function scripts() {
     return src([
         // 'node_modules/jquery/dist/jquery.min.js',
         'src/js/plagins/lazyload.min.js',
-        'src/js/plagins/slick.min.js',
+        // 'src/js/plagins/slick.min.js',
         'src/js/main.js'
     ])
     .pipe(concat('main.min.js'))
