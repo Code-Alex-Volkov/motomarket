@@ -1,6 +1,13 @@
 $(function () {
 	'use strict';
 
+	$('.slider-header').not('.slick-initialized').slick({
+		dots: true,
+		arrows: true,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
 
 	$('.log-reg').on('click', function() {
 		$('.u-column1').css('display', 'none');
@@ -366,12 +373,7 @@ $(function () {
 		return false;
 	});
 
-	$('.slider-header').slick({
-		dots: true,
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-	});
+	
 
 	$(".item-box-hover").hover(function () {
 		$(this).addClass('active');

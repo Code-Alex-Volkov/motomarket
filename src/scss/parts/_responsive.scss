@@ -1,0 +1,111 @@
+@media (max-width: 1200px) {
+	.header .menu-content {
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 1020px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 576px) {
+	.our-advantages {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.our-advantages .content {
+		margin-bottom: 30px;
+	}
+	.header .top-header {
+		display: none;
+	}
+	.center-header {
+		display: none;
+	}
+	.center-header-mobile {
+		display: block;
+	}
+	.header .menu-content-desctop {
+		display: none;
+	}
+	.header .menu-content-mobile {
+		display: flex;
+	}
+	.header .menu-content .item-box .menu-item .button-form {
+		max-width: 175px;
+		width: 100%;
+	}
+	.header .menu-content .item-box {
+		width: 48%;
+	}
+	.slider-box .slider-header .slide .content-slide .title {
+		transform: none;
+		margin-top: 0;
+		margin-left: 0;
+		padding: 20px;
+		width: 100%;
+	}
+	.slider-box .slider-header .slide .content-slide .title span {
+		font-size: 19px;
+		line-height: 24px;
+	}
+	.slider-box .slider-header .slide .content-slide .action-time span {
+		font-size: 14px;
+		line-height: 20px;
+		padding: 20px;
+		padding-left: 56px;
+	}
+	.slider-box .slider-header .slide .content-slide .action-time span:before {
+		content: '';
+		display: inline-block;
+		width: 150%;
+		height: 52px;
+		border: 3px solid #fff;
+		position: absolute;
+		top: -10px;
+		right: -15px;
+		z-index: -1;
+	}
+	.slider-box .slider-header .slide .content-slide .action-time {
+	  margin-left: -30px;
+	  width: 240px;
+	  margin-top: 15px;
+	}
+	.slider-box .slider-header .slide .content-slide .image-slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 534px;
+		z-index: -1;
+		object-fit: cover;
+		object-position: center;
+	}
+	.slider-header .slick-prev {
+		display: none;
+	}
+	.slider-header .slick-next {
+		display: none;
+	}
+	.title-block:before {
+		display: none;
+	}
+	.title-block span {
+		padding: 0;
+	}
+	.title-block {
+		font-size: 26px;
+	}
+}
+
+@media (max-width: 420px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
