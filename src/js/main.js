@@ -4,6 +4,11 @@ $(function () {
 	$('.catalog-title-btn').on('click', function() {
 		$('.menu-content-mobile-nav').toggle('active');
 	});
+	$('.btn-filter-form').on('click', function() {
+		$('.catalog-content .left-filter').addClass('active-filter');
+		$('.form-absolute').addClass('active');
+		$('.catalog-content .blur-class').addClass('active');
+	});
 
 	$('.nav-mobile').on('click', function() {
 		$('.content-mobile-nav').addClass('active');
@@ -12,6 +17,11 @@ $(function () {
 	$('.menu-close').on('click', function() {
 		$('.content-mobile-nav').removeClass('active');
 		$("body").removeClass("over-hidden");
+	});
+	$('.filter-close').on('click', function() {
+		$('.catalog-content .left-filter').removeClass('active-filter');
+		$('.form-absolute').removeClass('active');
+		$('.catalog-content .blur-class').removeClass('active');
 	});
 
 	$('.slider-header').not('.slick-initialized').slick({

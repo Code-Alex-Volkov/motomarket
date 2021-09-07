@@ -10,6 +10,12 @@
 .motoman-mobile {
 	display: none;
 }
+.btn-filter-form {
+	display: none;
+}
+.blur-class {
+	display: none;
+}
 
 @media (max-width: 1200px) {
 	.header .menu-content {
@@ -491,7 +497,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 500;
+		z-index: 700;
 		background: rgba(27, 30, 29, 0.4);
 		backdrop-filter: blur(8px);
 		height: 100vh;
@@ -630,28 +636,6 @@
 				}
 			}
 		}
-		.menu-close {
-			background: #FACE50;
-			border-radius: 1px;
-			position: relative;
-			top: 13px;
-			width: 30px;
-			height: 30px;
-			cursor: pointer;
-			span {
-				display: block;
-				width: 18px;
-				height: 1.5px;
-				background: #323534;;
-				transition: all 0.2s ease;
-			}
-			.top-line {
-				transform: rotate(45deg) translate(14px, 6px);
-			}
-			.bottom-line {
-				transform: rotate(-45deg) translate(-5px, 14px);
-			}
-		}
 	}
 	.catalog-content .left-filter {
 		position: absolute;
@@ -689,6 +673,44 @@
 		@include fontRegular();
 		font-size: 12px;
 	}
+	.btn-filter-form {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: -45px;
+		margin-bottom: 20px;
+	}
+	.btn-filter-form span {
+		width: 180px;
+		height: 27px;
+		line-height: 27px;
+		text-align: center;
+		background: #FACE50;
+		border-radius: 1px;
+		@include fontRegular();
+		font-size: 12px;
+	}
+	.catalog-content .left-filter.active-filter {
+		left: -10px;
+		display: flex;
+    	align-items: flex-start;
+	}
+	.form-absolute.active {
+		display: none;
+	}
+	.catalog-content .blur-class.active {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -10px;
+		background: rgba(27, 30, 29, 0.4);
+		backdrop-filter: blur(8px);
+		height: 100%;
+		width: 110%;
+		z-index: 40;
+	}
+	.content-area {
+		overflow: hidden;
+	} 
 }
 
 @media (max-width: 380px) {

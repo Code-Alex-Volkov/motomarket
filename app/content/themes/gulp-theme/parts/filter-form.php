@@ -256,3 +256,8 @@
 	<input type="hidden" name="action" value="catalogfilter">
 	
 </form>
+
+<div class="filter-close">
+	<span class="top-line"></span>
+	<span class="bottom-line"></span>
+</div>
