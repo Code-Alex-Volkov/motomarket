@@ -1,7 +1,7 @@
 <?php get_header(); ?>   
 
 <div class="wrapper" >
-	<div class="main-condition"><a href="#">Главная </a><span> - СЕРВИС</span></div>
+	<div class="main-condition"><a href="/">Главная </a><span> - СЕРВИС</span></div>
 	<div class="title-page">СЕРВИС</div>
 	<div class="photo"><img src="<?php echo get_template_directory_uri() ?>/assets/img/bg-services.jpg" alt="#" /></div>
 

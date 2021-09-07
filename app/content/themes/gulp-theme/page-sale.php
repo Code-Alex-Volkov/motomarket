@@ -1,7 +1,7 @@
 <?php get_header(); ?>   
 
 <div class="wrapper">
-	<div class="main-ask"><a href="#">Главная </a><span> - РАСПРОДАЖА</span></div>
+	<div class="main-ask"><a href="/">Главная </a><span> - РАСПРОДАЖА</span></div>
 	<div class="title-page"><?php the_title(); ?></div>
 	<?php 
 

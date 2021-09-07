@@ -78,8 +78,8 @@
 	</div>
 	<div class="wrapper-header-mobile">
 		<div class="wrapper top">
-			<div class="btn-menu">
-4545
+			<div class="nav-mobile"> 
+				<span class="line"></span>
 			</div>
 			<div class="logo">
 				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo_MMM.svg" alt="Logo"></a>
@@ -108,6 +108,7 @@
 	</div>
 	<div class="wrapper">
 		<?php get_template_part( './parts/nav' ); ?>
+		<?php get_template_part( './parts/mobile-nav' ); ?>
 	</div>
 </header>
 	

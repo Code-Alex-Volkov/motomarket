@@ -334,6 +334,7 @@
 					margin-left: -5px;
 					margin-right: -5px;
 					.product {
+						width: 310px !important;
 						.link-title {
 							display: block;
 							.woocommerce-loop-product__title {
@@ -408,6 +409,12 @@
 				width: 420px;
 				height: 420px;
 				display: inline-block;
+				img {
+					width: 420px;
+					height: 420px;
+					object-fit: cover;
+					object-position: center;
+				}
 			}
 		}
 		.slick-next {

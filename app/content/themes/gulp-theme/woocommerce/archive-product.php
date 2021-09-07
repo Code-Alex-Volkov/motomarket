@@ -33,7 +33,7 @@ do_action( 'woocommerce_before_main_content' );
 
 <?php if (! is_search() ) { ?>
 
-	<div class="main-condition"><a href="/">Главная </a><span> - КАТАЛОГ</span></div>
+	<div class="main-condition main-condition-mobile"><a href="/">Главная </a><span> - КАТАЛОГ</span></div>
 
 	<?php
 		$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -165,7 +165,7 @@ do_action( 'woocommerce_before_main_content' );
 		do_action( 'woocommerce_sidebar' ); ?>
 
 <?php	} else { ?>
-	<div class="main-ask"><a href="#">Главная </a><span> - ПОИСК</span></div>
+	<div class="main-ask"><a href="/">Главная </a><span> - ПОИСК</span></div>
 	<div class="title-page">Поиск по каталогу</div>
 	<div class="box-count">
 		<div class="left">
