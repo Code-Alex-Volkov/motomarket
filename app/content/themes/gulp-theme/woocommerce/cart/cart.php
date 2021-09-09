@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit; ?>
 	<div class="main-condition"><a href="#">Главная </a><span> - КОРЗИНА</span></div>
 	<div class="box-title">
 		<div class="title-page"><?php the_title(); ?></div>
-		<div class="count-order">В вашем заказе: <?php echo WC()->cart->get_cart_contents_count(); ?> товаров</div>
+		<div class="count-order">В вашем заказе: <span><?php echo WC()->cart->get_cart_contents_count(); ?> товаров</span></div>
 	</div>
 	<?php do_action( 'woocommerce_before_cart' ); ?>
 
@@ -54,7 +54,8 @@ defined( 'ABSPATH' ) || exit; ?>
 							?>
 							<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-								<td class="product-number"> 
+								<td class="product-number">
+									<span class="product-number-mobile">№</span>
 									<?php 
 										$number = array_search($cart_item_key, array_keys(WC()->cart->get_cart()));
 										echo $number + 1 . '.'; 
@@ -130,6 +131,7 @@ defined( 'ABSPATH' ) || exit; ?>
 								</td>
 
 								<td class="product-remove">
+									<span class="product-remove-mobile">Удалить</span>
 									<?php
 										echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 											'woocommerce_cart_item_remove_link',

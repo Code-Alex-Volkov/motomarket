@@ -228,6 +228,10 @@ remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_pr
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 add_action( 'woocommerce_single_product_summary_alex_add_to_cart', 'woocommerce_template_single_add_to_cart', 30 );
 
+// Добавить название товара и артикул на мобиле
+add_action( 'woocommerce_title_mobile_single_product_summary', 'woocommerce_template_single_title', 5 );
+add_action( 'woocommerce_title_mobile_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );

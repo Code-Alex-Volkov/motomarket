@@ -36,6 +36,9 @@ if ( post_password_required() ) {
 	<div class="content-box">
 
 		<section class="content-flex">
+			<div class="mobile-header-product">
+				<?php do_action( 'woocommerce_title_mobile_single_product_summary' ); ?>
+			</div>
 			
 			<?php
 			/**

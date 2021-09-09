@@ -58,7 +58,7 @@ get_header( 'shop' ); ?>
 			<input type="hidden" name="subcategory[]" value="<?php echo $subCatSlug; ?>">
 		</form>
 
-		<span class="text-upper"> - <?php the_title(); ?></span>
+		<span class="text-upper text-upper-mobile"> - <?php the_title(); ?></span>
 	</div>
 		
 	<?php while ( have_posts() ) : ?>
