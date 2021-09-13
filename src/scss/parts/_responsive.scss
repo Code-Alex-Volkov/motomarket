@@ -1298,7 +1298,23 @@
 	.products .product .woocommerce-LoopProduct-link img {
 		max-width: 180px;
 		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
+	.wpcf7-form {
+		width: 90%;
+		margin: 0 auto;
+  }
+  	.woocommerce-add-to-cart .single_add_to_cart_button,
+	.woocommerce-variation-add-to-cart .single_add_to_cart_button {
+		width: calc(100% - 120px);
+  	}
+	.woocommerce-add-to-cart, .woocommerce-variation-add-to-cart {
+		background-color: #1b1e1d;
+		padding: 20px 10px;
+		display: flex;
+		flex-wrap: wrap;
+ 	}
 }
 
 @media (max-width: 380px) {
@@ -1306,10 +1322,6 @@
 		position: relative;
 		padding: 0 10px;
   	}
-	.woocommerce-add-to-cart .single_add_to_cart_button, 
-	.woocommerce-variation-add-to-cart .single_add_to_cart_button {
-		width: 193px;
-	}
 	.products .product {
 		max-width: 173px;
 	}

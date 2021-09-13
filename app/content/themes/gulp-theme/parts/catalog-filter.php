@@ -194,11 +194,17 @@ function alex_catalogfilter_function(){
 	endif;
 	wp_reset_query();
 
-	
+	// echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
+	// print_r($wp_query->query_vars);
+	// echo '</pre>';
+	// // Проверить, по каким параметрам будут выводиться товары
+	// echo '<pre style="border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
+	// print_r($args);
+	// echo '</pre></div>';
 	if (  $wp_query->max_num_pages > 1 ) : ?>
 		
 		<script>
-			var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
+			var true_posts = '<?php echo serialize($args); ?>';
 			var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
 			var max_pages = <?php echo $wp_query->max_num_pages; ?>;
 			var foundPosts = <?php echo $wp_query->found_posts; ?>;

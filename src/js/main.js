@@ -329,12 +329,25 @@ $(function () {
 		$(this).parents('.product').find('.count-ok').show();
 		let request = await fetch(this.href);
 		let text = await request.text();
-		let counter = parseFloat($('.basket-btn-counter').text());
+		let counter = parseFloat($('.basket-btn-counter-btn-mobile').text());
 		counter += 1;
-		$('.basket-btn-counter').text(counter);
+		$('.basket-btn-counter-btn-mobile').text(counter);
 		$(this).parents('.product').find('.count-ok').hide();
 
 	});
+
+	$('.product-type-simple .add_to_cart_button').on("click", async function (e) {
+		e.preventDefault();
+		$(this).parents('.product').find('.count-ok').show();
+		let request = await fetch(this.href);
+		let text = await request.text();
+		let counter = parseFloat($('.basket-btn-counter-btn-dt').text());
+		counter += 1;
+		$('.basket-btn-counter-btn-dt').text(counter);
+		$(this).parents('.product').find('.count-ok').hide();
+
+	});
+
 	// добавить товар в корзину без перезагрузки страницы
 
 	document.addEventListener('wpcf7mailsent', function (event) {

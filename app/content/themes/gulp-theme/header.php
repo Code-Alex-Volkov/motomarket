@@ -60,7 +60,7 @@
 				</div>
 				<div class="cart-box">
 					<?php global $woocommerce; ?>
-					<span class="basket-btn-counter">
+					<span class="basket-btn-counter basket-btn-counter-btn-dt">
 						<?php 
 							if($woocommerce->cart->cart_contents_count) { 
 								echo sprintf($woocommerce->cart->cart_contents_count);
@@ -86,7 +86,7 @@
 			</div>
 			<div class="cart-box">
 				<?php global $woocommerce; ?>
-				<span class="basket-btn-counter">
+				<span class="basket-btn-counter basket-btn-counter-btn-mobile">
 					<?php 
 						if($woocommerce->cart->cart_contents_count) { 
 							echo sprintf($woocommerce->cart->cart_contents_count);

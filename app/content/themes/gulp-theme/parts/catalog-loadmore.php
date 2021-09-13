@@ -9,9 +9,22 @@ function catalog_loadmore_posts(){
 	$offset_start = 3;
 	$offset = ( $current_page - 1 ) * $per_page + $offset_start;
 	// $offset = ( $current_page - 1 ) * $per_page;
-	$args['offset'] = $offset;
+	
 	$args['paged'] = $current_page;
 	$args['posts_per_page'] = $per_page;
+	$args['offset'] = $offset;
+
+	// if( isset( $_POST['category'] ) ) {
+	// 	$args['tax_query'] = array( 'relation'=>'AND' ); // AND означает, что все условия tax_query должны выполняться
+	// 	$args['tax_query'][] = array(
+	// 		'taxonomy' => 'product_cat',
+	// 		'field' => 'slug',
+	// 		'terms' => $_POST['category']
+	// 	);
+	// 	// array_except($args, 'subcategory');
+	// } else {
+	// 	$args += ['post_type' => 'product'];
+	// }
 
 	// $args['posts_per_page'] = 6;
 	// $args['paged'] = $_POST['page'] + 1; // следующая страница
