@@ -87,13 +87,7 @@
 			<div class="cart-box">
 				<?php global $woocommerce; ?>
 				<span class="basket-btn-counter basket-btn-counter-btn-mobile">
-					<?php 
-						if($woocommerce->cart->cart_contents_count) { 
-							echo sprintf($woocommerce->cart->cart_contents_count);
-						} else { 
-							echo '0';
-						}
-					?>
+					<?php echo sprintf($woocommerce->cart->cart_contents_count); ?>
 				</span>
 				<a class="basket-btn" href="<?php echo esc_url( wc_get_cart_url() );?>">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/img/add_to_cart.svg" alt="cart">

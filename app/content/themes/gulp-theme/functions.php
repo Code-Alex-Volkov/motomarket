@@ -216,7 +216,7 @@ class Instagram{
 
 // Добавление товара в корзину, без перезагрузки страницы
 // remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_loop_add_to_cart', 30 );
+
 
 // Страница товара
 // Удалить хлебные крошки
@@ -226,7 +226,8 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 // Удалить скидку 
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-add_action( 'woocommerce_single_product_summary_alex_add_to_cart', 'woocommerce_template_loop_add_to_cart', 10 );
+add_action( 'woocommerce_single_product_summary_alex_add_to_cart', 'woocommerce_template_single_add_to_cart', 30 );
+add_action( 'woocommerce_single_product_summary_post', 'woocommerce_template_loop_add_to_cart', 10 );
 
 // Добавить название товара и артикул на мобиле
 add_action( 'woocommerce_title_mobile_single_product_summary', 'woocommerce_template_single_title', 5 );
@@ -469,5 +470,17 @@ function woocommerce_save_account_details_action() {
 
 add_action( 'woocommerce_save_account_details', 'woocommerce_save_account_details_action' );
 
-// Отлючить оплатц на сайте
+// Отлючить оплату на сайте
 add_filter( 'woocommerce_cart_needs_payment', '__return_false' );
+
+add_filter('woocommerce_add_to_cart_fragments', 'header_add_to_cart_fragment');
+
+function header_add_to_cart_fragment( $fragments ) {
+    // global $woocommerce;
+    ob_start();
+    ?>
+    <span class="basket-btn-counter"><?php echo sprintf(WC()->cart->cart_contents_count); ?></span>
+    <?php
+    $fragments['.basket-btn-counter'] = ob_get_clean();
+    return $fragments;
+}

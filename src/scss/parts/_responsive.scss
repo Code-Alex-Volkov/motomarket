@@ -490,6 +490,9 @@
 		box-sizing: border-box;
 		color:#fff;
   	}
+	  .js-dgwt-wcas-overlay-mobile .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input  {
+		color: #000;
+	  }
 	.dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
 		padding: 0;
 		height: 50px;
@@ -1315,6 +1318,14 @@
 		display: flex;
 		flex-wrap: wrap;
  	}
+	.wrapper-account .right-box {
+		width: 100%;
+		max-width: 420px;
+  	}
+	  .wrapper-account .right-box .u-column-content .woocommerce-form-login {
+		width: 100%;
+		max-width: 100%;
+  }
 }
 
 @media (max-width: 380px) {

@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php wc_product_class( '', $product ); ?>>
+<li <?php wc_product_class( 'on-click-product', $product ); ?> >
 
 	<?php 
 		$b = get_the_time('Y-m-d H:i:s');

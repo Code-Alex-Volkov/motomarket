@@ -68,7 +68,12 @@ if ( post_password_required() ) {
 				 * @hooked woocommerce_template_single_sharing - 50
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
 				 */
-				do_action( 'woocommerce_single_product_summary' ); ?>
+				do_action( 'woocommerce_single_product_summary' );
+				
+				if(!is_product()) {
+					do_action( 'woocommerce_single_product_summary_post' );
+				}
+				?>
 
 				<?php do_action( 'woocommerce_single_product_summary_alex_add_to_cart' ); ?>
 				

@@ -6,11 +6,11 @@
 			<?php global $woocommerce; ?>
 			<a class="basket-btn<?php if($url == 'edit-account') { echo ' active'; } ?>" href="/my-account/edit-account/">
 				<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-account-user.svg" alt="cart">
-				<span class="basket-btn-counter">Профиль</span>
+				<span class="account-counter">Профиль</span>
 			</a>
 			<a class="basket-btn" href="<?php echo esc_url( wc_get_cart_url() );?>">
 				<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-account-cart.svg" alt="cart">
-				<span class="basket-btn-counter">
+				<span class="account-counter">
 					Корзина
 					<?php 
 						if($woocommerce->cart->cart_contents_count) { 
@@ -24,11 +24,11 @@
 			<?php if (is_user_logged_in()){ ?>
 				<a class="basket-btn<?php if($url == 'orders') { echo ' active'; } ?>" href="/my-account/orders/">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-account-listorder.svg" alt="cart">
-					<span class="basket-btn-counter">Мои заказы</span>
+					<span class="account-counter">Мои заказы</span>
 				</a>
 				<a class="basket-btn" href="<?php echo wp_logout_url( home_url() ); ?>">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/img/icon-account-logout.svg" alt="cart">
-					<span class="basket-btn-counter">Выйти</span>
+					<span class="account-counter">Выйти</span>
 				</a>
 			<?php	} ?>
 		</div>

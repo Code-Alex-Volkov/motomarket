@@ -255,6 +255,13 @@ function alex_catalogfilter_function(){
 						}
 					});
 				});
+
+				$('.product-type-simple .add_to_cart_button').on("click", function () {
+					$(this).parents('.product').find('.count-ok').fadeIn(700, function() {
+						$(this).parents('.product').find('.count-ok').fadeOut();
+					});
+				});
+
 			});
 		</script>
 

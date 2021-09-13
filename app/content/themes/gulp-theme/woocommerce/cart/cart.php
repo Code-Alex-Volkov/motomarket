@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit; ?>
 	<div class="main-condition"><a href="#">Главная </a><span> - КОРЗИНА</span></div>
 	<div class="box-title">
 		<div class="title-page"><?php the_title(); ?></div>
-		<div class="count-order">В вашем заказе: <span><?php echo WC()->cart->get_cart_contents_count(); ?> товаров</span></div>
+		<div class="count-order">В вашем заказе: <span class="basket-btn-counter basket-counter-alex"><?php echo WC()->cart->get_cart_contents_count(); ?></span>товаров</div>
 	</div>
 	<?php do_action( 'woocommerce_before_cart' ); ?>
 

@@ -24,6 +24,13 @@
 				line-height: 130%;
 				@include fontBold();
 			}
+			
+			.account-counter {
+				color:#fff;
+				font-size: 16px;
+				line-height: 130%;
+				@include fontBold();
+			}
 		}
 	}
 	.right-box {

@@ -34,6 +34,16 @@ function alex_slidertabs_function(){
 		endwhile;
 	endif;
 	wp_reset_query();
-
+?>
+<script>
+	jQuery(function () {
+		$('.product-type-simple .add_to_cart_button').on("click", function () {
+			$(this).parents('.product').find('.count-ok').fadeIn(700, function() {
+				$(this).parents('.product').find('.count-ok').fadeOut();
+			});
+		});
+	});
+</script>
+<?php
 	die();
 }

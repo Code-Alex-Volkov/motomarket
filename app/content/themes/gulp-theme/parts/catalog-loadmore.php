@@ -47,6 +47,21 @@ function catalog_loadmore_posts(){
 
 	endif;
 	wp_reset_query();
+?>
+
+<script>
+	$(function () {
+
+		$('.product-type-simple .add_to_cart_button').on("click", function () {
+			$(this).parents('.product').find('.count-ok').fadeIn(700, function() {
+				$(this).parents('.product').find('.count-ok').fadeOut();
+			});
+		});
+	});
+</script>
+
+<?php
+
 	die();
 }
 add_action('wp_ajax_catalogloadmore', 'catalog_loadmore_posts');

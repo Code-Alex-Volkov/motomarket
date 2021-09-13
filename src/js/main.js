@@ -1,6 +1,18 @@
 $(function () {
 	'use strict';
 
+	$('.product-type-variable .add_to_cart_button').on("click", function (event) {
+		event.preventDefault();
+	});
+
+	$('.product.product-type-variable').find('.link-add-to-cart a').css('cursor', 'no-drop');
+
+	$('.product-type-simple .add_to_cart_button').on("click", function () {
+		$(this).parents('.on-click-product').find('.count-ok').fadeIn(700, function() {
+			$(this).parents('.on-click-product').find('.count-ok').fadeOut();
+		 });
+	});
+
 	$('.catalog-title-btn').on('click', function() {
 		$('.menu-content-mobile-nav').toggle('active');
 	});
@@ -76,12 +88,6 @@ $(function () {
 		$('#catalogfilter').submit();
 
 	});
-
-	$('.product-type-variable .add_to_cart_button').on("click", function (event) {
-		event.preventDefault();
-	});
-
-	$('.product.product-type-variable').find('.link-add-to-cart a').css('cursor', 'no-drop');
 
 	$('.mototehnika-click').on('click', function () {
 		$('.filter-box-cat').removeClass('active');
@@ -321,34 +327,6 @@ $(function () {
 		nextArrow: '<buttom class="slick-next"><span class="arr"></span></buttom>',
 		focusOnSelect: true,
 	});
-
-
-	// добавить товар в корзину без перезагрузки страницы
-	$('.product-type-simple .add_to_cart_button').on("click", async function (e) {
-		e.preventDefault();
-		$(this).parents('.product').find('.count-ok').show();
-		let request = await fetch(this.href);
-		let text = await request.text();
-		let counter = parseFloat($('.basket-btn-counter-btn-mobile').text());
-		counter += 1;
-		$('.basket-btn-counter-btn-mobile').text(counter);
-		$(this).parents('.product').find('.count-ok').hide();
-
-	});
-
-	$('.product-type-simple .add_to_cart_button').on("click", async function (e) {
-		e.preventDefault();
-		$(this).parents('.product').find('.count-ok').show();
-		let request = await fetch(this.href);
-		let text = await request.text();
-		let counter = parseFloat($('.basket-btn-counter-btn-dt').text());
-		counter += 1;
-		$('.basket-btn-counter-btn-dt').text(counter);
-		$(this).parents('.product').find('.count-ok').hide();
-
-	});
-
-	// добавить товар в корзину без перезагрузки страницы
 
 	document.addEventListener('wpcf7mailsent', function (event) {
 		$('.popup-modal').fadeOut(400);
