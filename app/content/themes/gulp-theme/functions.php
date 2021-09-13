@@ -371,7 +371,7 @@ function truemisha_privacy_checkbox() {
 		'label_class'   => array( 'woocommerce-form__label-for-checkbox' ),
 		'input_class'   => array( 'woocommerce-form__input-checkbox' ),
 		'required'      => true,
-		'label'         => '<span class="input-checkbox-text">Я принимаю условия <a href="/politika" target="_blank">политики обработки персональных данных </a> *</span>',
+		'label'         => '<span class="input-checkbox-text">Я принимаю условия <a href="' . get_field('politika', 'option') . '" target="_blank">политики обработки персональных данных </a> *</span>',
 	));
  
 }
@@ -468,3 +468,6 @@ function woocommerce_save_account_details_action() {
 }
 
 add_action( 'woocommerce_save_account_details', 'woocommerce_save_account_details_action' );
+
+// Отлючить оплатц на сайте
+add_filter( 'woocommerce_cart_needs_payment', '__return_false' );

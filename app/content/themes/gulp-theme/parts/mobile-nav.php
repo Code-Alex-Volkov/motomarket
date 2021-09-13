@@ -1,5 +1,5 @@
 <div class="content-mobile-nav">
-
+	<?php $slug = basename( get_permalink() ); ?>
 	<div class="content">
 		<div class="title-mobile-nav">Мотомагазин MotoMarket</div>
 		<div class="box-menu-1">

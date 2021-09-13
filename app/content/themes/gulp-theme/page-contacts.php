@@ -9,7 +9,7 @@
 			<?php the_content(); ?>
 			<div class="block">
 				<div class="item">
-					<div class="title">Время работы bfjhfjgd:</div>
+					<div class="title">Время работы:</div>
 					<div class="text"><?php the_field('work-time'); ?></div>
 				</div>
 				<div class="item">
@@ -37,10 +37,11 @@
 			<div class="form-content">
 				<div class="title-form">У вас остались вопросы?<br>Задайте их нам!</div>
 				<?php echo do_shortcode('[contact-form-7 id="108" title="Задать вопрос"]'); ?>
-				<div class="politik-text">Нажимая на кнопку подтверждения вы принимаете условия <a href="/politika">политики обработки персональных данных</a></div>
+				<div class="politik-text">Нажимая на кнопку подтверждения вы принимаете условия <a href="<?php the_field('politika', 'option'); ?>" target="_blank">политики обработки персональных данных</a></div>
 			</div>
 		</div>
 
 	</div>
 </div>
+
 <?php get_footer(); ?>

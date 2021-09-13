@@ -55,11 +55,13 @@ defined( 'ABSPATH' ) || exit; ?>
 							<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
 								<td class="product-number">
-									<span class="product-number-mobile">№</span>
-									<?php 
-										$number = array_search($cart_item_key, array_keys(WC()->cart->get_cart()));
-										echo $number + 1 . '.'; 
-									?>
+									<span class="product-number-mobile">№ </span>
+									<span>
+										<?php 
+											$number = array_search($cart_item_key, array_keys(WC()->cart->get_cart()));
+											echo $number + 1 . '.'; 
+										?>
+									</span>
 								</td>
 
 								<td class="product-thumbnail">
@@ -100,9 +102,13 @@ defined( 'ABSPATH' ) || exit; ?>
 									?>
 								</td>
 
-								<td class="product-stock"><div class="stock"><?php esc_html_e( 'В наличии', 'woocommerce' ); ?></div></td>
+								<td class="product-stock">
+									<span class="product-stock-mobile">Наличие на складе</span>
+									<div class="stock"><?php esc_html_e( 'В наличии', 'woocommerce' ); ?></div>
+								</td>
 
 								<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
+									<span class="product-stock-mobile">Количество</span>
 									<?php
 										if ( $_product->is_sold_individually() ) {
 											$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );

@@ -17,7 +17,7 @@
 			</div>
 			<div class="item-footer">
 				<a href="<?php the_field('politika', 'option'); ?>" target="_blank">Пользовательское соглашение</a>
-				<a href="/404/">Договор оферты</a>
+				<a href="<?php the_field('oferta', 'option'); ?>" target="_blank">Договор оферты</a>
 				<button class="popup-open-feedback">Обратная связь</button>
 			</div>
 			<div class="item-footer">
