@@ -18,6 +18,13 @@ require get_template_directory() . '/parts/catalog-loadmore.php';
 
 add_filter('show_admin_bar', '__return_false'); // отключить верхнюю панель администратора
 
+if ( ! current_user_can( 'manage_options' ) ) {
+	show_admin_bar( false );
+}
+
+// Отключает прокрутку корзины при обновлении
+remove_action('woocommerce_before_cart', 'woocommerce_output_all_notices', 10);
+
 // Зарегистрировать скрипты и стили
 function gulp_scripts() {
   wp_enqueue_style( 'gulp-style', get_stylesheet_uri(), '1.1', true );
@@ -36,7 +43,7 @@ add_action( 'wp_enqueue_scripts', 'gulp_scripts' );
 
 // add_theme_support( 'wc-product-gallery-zoom' );
 add_theme_support( 'wc-product-gallery-lightbox' );
-add_theme_support( 'wc-product-gallery-slider' );
+add_theme_support( 'wc-product-gallery-slider' ); 
 
 function remove_styles () {
 	wp_deregister_style ('contact-form-7');
@@ -214,10 +221,6 @@ class Instagram{
   }
 }
 
-// Добавление товара в корзину, без перезагрузки страницы
-// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-
-
 // Страница товара
 // Удалить хлебные крошки
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
@@ -225,6 +228,7 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 )
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 // Удалить скидку 
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+// Добавление товара в корзину, без перезагрузки страницы
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 add_action( 'woocommerce_single_product_summary_alex_add_to_cart', 'woocommerce_template_single_add_to_cart', 30 );
 add_action( 'woocommerce_single_product_summary_post', 'woocommerce_template_loop_add_to_cart', 10 );
@@ -473,8 +477,8 @@ add_action( 'woocommerce_save_account_details', 'woocommerce_save_account_detail
 // Отлючить оплату на сайте
 add_filter( 'woocommerce_cart_needs_payment', '__return_false' );
 
+// Ссылка на корзину + обновление её при ajax изменениях
 add_filter('woocommerce_add_to_cart_fragments', 'header_add_to_cart_fragment');
-
 function header_add_to_cart_fragment( $fragments ) {
     // global $woocommerce;
     ob_start();
@@ -484,3 +488,44 @@ function header_add_to_cart_fragment( $fragments ) {
     $fragments['.basket-btn-counter'] = ob_get_clean();
     return $fragments;
 }
+
+/* обрезка заголовков */
+  function get_short_title( $title ){
+    if ( ! is_product() ) {
+      $maxchar = 50; // Выводит только 70 символов в заголовке
+      if( mb_strlen( $title ) < $maxchar ) {
+        return $title;
+      }
+      $title = mb_substr( $title, 0, $maxchar );
+      $title = preg_replace('@(.*)\s[^\s]*$@s', '\\1 ...', $title); // Убираем последнее слово, ибо оно в 99% случаев неполное
+      return $title;
+    } else {
+      return $title;
+    }
+  }
+  add_filter( 'the_title', 'get_short_title');
+
+add_filter( 'woocommerce_product_query_meta_query', 'shop_only_instock_products', 10, 2 );
+function shop_only_instock_products( $meta_query, $query ) {
+    // In frontend only
+    if( is_admin() ) return $meta_query;
+
+    $meta_query['relation'] = 'OR';
+
+    $meta_query[] = array(
+        'key'     => '_price',
+        'value'   => '',
+        'type'    => 'numeric',
+        'compare' => '!='
+    );
+    $meta_query[] = array(
+        'key'     => '_price',
+        'value'   => 0,
+        'type'    => 'numeric',
+        'compare' => '!='
+    );
+    return $meta_query;
+}
+
+// Отключить уведомление о том что товар удален
+add_filter( 'woocommerce_cart_item_removed_notice_type', '__return_false' );

@@ -6,7 +6,7 @@ add_action('wp_ajax_nopriv_catalogfilter', 'alex_catalogfilter_function'); // wp
 function alex_catalogfilter_function(){
 	$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$args = array(
-		'posts_per_page' 	=> 3, // Выводит 18 товаров на страницу
+		'posts_per_page' 	=> 12, // Выводит 18 товаров на страницу
 		'paged'				=> $current_page,
 		'orderby' 			=> 'date', // Сортировка товаров по дате
 		'order'	 			=> 'DESC', // ASC or DESC
@@ -174,13 +174,17 @@ function alex_catalogfilter_function(){
 	// print_r($args);
 	// echo '</pre></div>';
 
+	echo '<div style="color:#fff;font-size:13px;line-height:15px;width: 100%; display:flex;"><pre style="border:1px solid red;padding:20px;background-color:#000;margin:10px;">';
+	print_r($_POST);
+	echo '</pre></div>';
+
 	$wp_query = new WP_Query( $args ); ?>
 
 	<div class="right">
 		<?php if($wp_query->found_posts == 0) { ?>
 			<div class="count-box">Товаров не найдено</div>
 		<?php } else { ?>
-			<div class="count-box">Показано 1- <span class="number-span"><?php if( $wp_query->found_posts < 3 ) { echo $wp_query->found_posts; } else { echo ' 3'; } ?></span> из <?php echo $wp_query->found_posts; ?> результатов</div>
+			<div class="count-box">Показано 1- <span class="number-span"><?php if( $wp_query->found_posts < 12 ) { echo $wp_query->found_posts; } else { echo ' 12'; } ?></span> из <?php echo $wp_query->found_posts; ?> результатов</div>
 		<?php } ?>
 	</div>
 
@@ -247,10 +251,10 @@ function alex_catalogfilter_function(){
 								$('#catalog_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
 							}
 							
-							if( prLength < 3 ) {
+							if( prLength < 12 ) {
 								$('.number-span').text(parseInt(numberSpan) + prLength);
 							} else {
-								$('.number-span').text(parseInt(numberSpan) + 3);
+								$('.number-span').text(parseInt(numberSpan) + 12);
 							}
 						}
 					});

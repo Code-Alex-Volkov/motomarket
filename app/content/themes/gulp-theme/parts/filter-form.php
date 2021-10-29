@@ -72,8 +72,8 @@
 		$parent_term_id = $term->term_id;
 		$sub_cats = get_terms( array(
 			'taxonomy' => 'product_cat',
-			'child_of' => $parent_term_id,
-			'hide_empty' => 0
+			'parent' => $parent_term_id,
+			'hide_empty' => 1
 		) );
 		?>
 		<div class="filter-box filter-box-cat mototehnika <?php if( !empty($catPOST) && $catPOST == "mototehnika" ) { echo 'active'; } ?>">
@@ -103,8 +103,8 @@
 		$parent_term_id = $term->term_id;
 		$sub_cats = get_terms( array(
 			'taxonomy' => 'product_cat',
-			'child_of' => $parent_term_id,
-			'hide_empty' => 0
+			'parent' => $parent_term_id,
+			'hide_empty' => 1
 		) );
 		?>
 		<div class="filter-box filter-box-cat snaryazhenie <?php if( !empty($catPOST) && $catPOST == "snaryazhenie" ) { echo 'active'; } ?>">
@@ -134,8 +134,8 @@
 		$parent_term_id = $term->term_id;
 		$sub_cats = get_terms( array(
 			'taxonomy' => 'product_cat',
-			'child_of' => $parent_term_id,
-			'hide_empty' => 0
+			'parent' => $parent_term_id,
+			'hide_empty' => 1
 		) );
 		?>
 		<div class="filter-box filter-box-cat zapchasti <?php if( !empty($catPOST) && $catPOST == "zapchasti" ) { echo 'active'; } ?>">
@@ -165,8 +165,8 @@
 		$parent_term_id = $term->term_id;
 		$sub_cats = get_terms( array(
 			'taxonomy' => 'product_cat',
-			'child_of' => $parent_term_id,
-			'hide_empty' => 0
+			'parent' => $parent_term_id,
+			'hide_empty' => 1
 		) );
 		?>
 		<div class="filter-box filter-box-cat masla <?php if( !empty($catPOST) && $catPOST == "masla" ) { echo 'active'; } ?>">

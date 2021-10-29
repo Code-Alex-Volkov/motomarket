@@ -1,0 +1,251 @@
+2021-09-28T05:52:31+00:00 CRITICAL syntax error, unexpected 'б' (T_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 17
+
+2021-09-28T05:52:32+00:00 CRITICAL syntax error, unexpected 'б' (T_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 17
+
+2021-09-28T05:52:35+00:00 CRITICAL syntax error, unexpected ';', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:35+00:00 CRITICAL syntax error, unexpected ';', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:36+00:00 CRITICAL Assignments can only happen to writable values в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:37+00:00 CRITICAL Assignments can only happen to writable values в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:37+00:00 CRITICAL Assignments can only happen to writable values в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:37+00:00 CRITICAL Assignments can only happen to writable values в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:38+00:00 CRITICAL Assignments can only happen to writable values в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:38+00:00 CRITICAL Assignments can only happen to writable values в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:38+00:00 CRITICAL Assignments can only happen to writable values в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:52:43+00:00 CRITICAL Illegal offset type в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 8
+
+2021-09-28T05:52:44+00:00 CRITICAL Illegal offset type в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 8
+
+2021-09-28T05:52:47+00:00 CRITICAL syntax error, unexpected ')', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 20
+
+2021-09-28T05:52:47+00:00 CRITICAL syntax error, unexpected ')', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 20
+
+2021-09-28T05:53:36+00:00 CRITICAL syntax error, unexpected ']', expecting identifier (T_STRING) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 25
+
+2021-09-28T05:53:46+00:00 CRITICAL syntax error, unexpected ''value'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 27
+
+2021-09-28T05:53:47+00:00 CRITICAL syntax error, unexpected ''value'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 27
+
+2021-09-28T05:53:47+00:00 CRITICAL syntax error, unexpected ''value'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 27
+
+2021-09-28T05:56:15+00:00 CRITICAL syntax error, unexpected '{', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 14
+
+2021-09-28T05:56:15+00:00 CRITICAL syntax error, unexpected '{', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 14
+
+2021-09-28T05:56:16+00:00 CRITICAL syntax error, unexpected '{', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 14
+
+2021-09-28T05:56:16+00:00 CRITICAL syntax error, unexpected '{', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 14
+
+2021-09-28T05:56:16+00:00 CRITICAL syntax error, unexpected '{', expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 14
+
+2021-09-28T05:56:19+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 17
+
+2021-09-28T05:56:20+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 17
+
+2021-09-28T05:56:20+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 17
+
+2021-09-28T05:56:20+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 17
+
+2021-09-28T05:56:20+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 17
+
+2021-09-28T05:56:23+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:56:24+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:56:24+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 18
+
+2021-09-28T05:56:26+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 22
+
+2021-09-28T05:56:26+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 22
+
+2021-09-28T05:56:29+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 25
+
+2021-09-28T05:56:30+00:00 CRITICAL syntax error, unexpected ''relation'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\parts\sliderform.php на строке 25
+
+2021-09-28T10:37:53+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 528
+
+2021-09-28T10:37:53+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 528
+
+2021-09-28T10:37:54+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 528
+
+2021-09-28T10:37:54+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 528
+
+2021-09-28T10:37:54+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 528
+
+2021-09-28T10:38:00+00:00 CRITICAL syntax error, unexpected 'add_filter' (T_STRING) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 510
+
+2021-09-28T10:38:00+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 530
+
+2021-09-28T10:38:33+00:00 CRITICAL Uncaught Error: Call to undefined function is_post() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:497
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-settings.php(546): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp-config.php(77): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-load.php(55): require_once('E:\\OSPanel\\doma...')
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(13): require_once('E:\\OSPanel\\doma...')
+#4 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#5 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 497
+
+2021-09-28T10:38:33+00:00 CRITICAL Uncaught Error: Call to undefined function is_post() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:497
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-settings.php(546): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp-config.php(77): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-load.php(55): require_once('E:\\OSPanel\\doma...')
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-admin\admin.php(34): require_once('E:\\OSPanel\\doma...')
+#4 E:\OSPanel\domains\motomarket.loc\app\wp\wp-admin\post.php(12): require_once('E:\\OSPanel\\doma...')
+#5 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 497
+
+2021-09-28T10:38:33+00:00 CRITICAL Uncaught Error: Call to undefined function is_post() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:497
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-settings.php(546): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp-config.php(77): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-load.php(55): require_once('E:\\OSPanel\\doma...')
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(13): require_once('E:\\OSPanel\\doma...')
+#4 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#5 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 497
+
+2021-09-28T10:38:33+00:00 CRITICAL Uncaught Error: Call to undefined function is_post() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:497
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-settings.php(546): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp-config.php(77): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-load.php(55): require_once('E:\\OSPanel\\doma...')
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-admin\admin-ajax.php(22): require_once('E:\\OSPanel\\doma...')
+#4 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 497
+
+2021-09-28T10:38:33+00:00 CRITICAL Uncaught Error: Call to undefined function is_post() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:497
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-settings.php(546): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp-config.php(77): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-load.php(55): require_once('E:\\OSPanel\\doma...')
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(13): require_once('E:\\OSPanel\\doma...')
+#4 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#5 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 497
+
+2021-09-28T10:38:59+00:00 CRITICAL syntax error, unexpected '}', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 507
+
+2021-09-28T10:38:59+00:00 CRITICAL syntax error, unexpected '}', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 507
+
+2021-09-28T10:39:00+00:00 CRITICAL syntax error, unexpected '}', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 507
+
+2021-09-28T10:39:00+00:00 CRITICAL syntax error, unexpected '}', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 507
+
+2021-09-28T10:39:00+00:00 CRITICAL syntax error, unexpected '}', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 507
+
+2021-09-28T10:39:07+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 530
+
+2021-09-28T10:39:08+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 530
+
+2021-09-28T10:39:08+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 530
+
+2021-09-28T10:39:08+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 530
+
+2021-09-28T10:39:55+00:00 CRITICAL syntax error, unexpected '}' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 507
+
+2021-09-28T10:39:55+00:00 CRITICAL syntax error, unexpected '}' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 507
+
+2021-09-28T10:44:35+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 534
+
+2021-09-28T10:44:35+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 534
+
+2021-09-28T10:44:36+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 534
+
+2021-09-28T10:46:25+00:00 CRITICAL Uncaught Error: Call to undefined function is_зкщвгсе() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:499
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\class-wp-hook.php(305): get_short_title('Alpinestars \xD0\x9C\xD0...')
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\plugin.php(189): WP_Hook->apply_filters('Alpinestars \xD0\x9C\xD0...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\post-template.php(171): apply_filters('the_title', 'Alpinestars \xD0\x9C\xD0...', 60)
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\post-template.php(43): get_the_title()
+#4 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php(61): the_title()
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include('E:\\OSPanel\\doma...')
+#6 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#7 E:\OSPanel\domains\motomarke в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 499
+
+2021-09-28T10:46:27+00:00 CRITICAL Uncaught Error: Call to undefined function is_pro() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:499
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\class-wp-hook.php(305): get_short_title('Alpinestars \xD0\x9C\xD0...')
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\plugin.php(189): WP_Hook->apply_filters('Alpinestars \xD0\x9C\xD0...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\post-template.php(171): apply_filters('the_title', 'Alpinestars \xD0\x9C\xD0...', 60)
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\post-template.php(43): get_the_title()
+#4 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php(61): the_title()
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include('E:\\OSPanel\\doma...')
+#6 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#7 E:\OSPanel\domains\motomarket.loc\app\i в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 499
+
+2021-09-28T10:46:28+00:00 CRITICAL Uncaught Error: Call to undefined function is_pro() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php:499
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\class-wp-hook.php(305): get_short_title('Alpinestars \xD0\x9C\xD0...')
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\plugin.php(189): WP_Hook->apply_filters('Alpinestars \xD0\x9C\xD0...', Array)
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\post-template.php(171): apply_filters('the_title', 'Alpinestars \xD0\x9C\xD0...', 60)
+#3 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\post-template.php(43): get_the_title()
+#4 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php(61): the_title()
+#5 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include('E:\\OSPanel\\doma...')
+#6 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#7 E:\OSPanel\domains\motomarket.loc\app\i в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\functions.php на строке 499
+
+2021-09-28T11:04:12+00:00 CRITICAL Uncaught Error: Call to undefined function var_() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php:47
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#3 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 47
+
+2021-09-28T11:05:05+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on string in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php:47
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#3 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 47
+
+2021-09-28T11:06:59+00:00 CRITICAL syntax error, unexpected 'print_r' (T_STRING) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:07:00+00:00 CRITICAL syntax error, unexpected 'print_r' (T_STRING) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:07:35+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:07:39+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:07:40+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:07:43+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:07:50+00:00 CRITICAL syntax error, unexpected ''taxanomy'' (T_CONSTANT_ENCAPSED_STRING), expecting '(' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:07:52+00:00 CRITICAL syntax error, unexpected ';', expecting ')' в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:09:55+00:00 CRITICAL syntax error, unexpected '$rew' (T_VARIABLE) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 47
+
+2021-09-28T11:09:56+00:00 CRITICAL syntax error, unexpected '$rew' (T_VARIABLE) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 47
+
+2021-09-28T11:10:36+00:00 CRITICAL syntax error, unexpected '$rew' (T_VARIABLE) в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 48
+
+2021-09-28T11:11:56+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_the_terms(), 1 passed in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php on line 37 and exactly 2 expected in E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\category-template.php:1274
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php(37): get_the_terms('product_cat')
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#3 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#4 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\category-template.php на строке 1274
+
+2021-09-28T11:12:08+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::cat_ID() in E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php:37
+Stack trace:
+#0 E:\OSPanel\domains\motomarket.loc\app\wp\wp-includes\template-loader.php(106): include()
+#1 E:\OSPanel\domains\motomarket.loc\app\wp\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#2 E:\OSPanel\domains\motomarket.loc\app\index.php(17): require('E:\\OSPanel\\doma...')
+#3 {main}
+  thrown в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 37
+

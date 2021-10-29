@@ -9,6 +9,7 @@
                     <a href="<?php echo esc_js('javascript:history.go(-1)'); ?>">Вернуться назад</a>
                 </div>
             </div>
+           
         </div>
     </div>
 

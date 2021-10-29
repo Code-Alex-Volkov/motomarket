@@ -1,4 +1,6 @@
-
+.content-serveces {
+	margin-bottom: 30px;
+}
 
 .left-content-wp {
 	h3 {
@@ -7,6 +9,10 @@
 	ul {
 		padding-top:40px;
 		li {
+			&:before {
+				content: '';
+				top: 16px;
+			}
 			a {
 				text-decoration: underline;
 				@include fontRegular();
@@ -16,6 +22,9 @@
 				line-height: 34.2px;
 				letter-spacing: 0.02em;
 				color: #FACE50;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}

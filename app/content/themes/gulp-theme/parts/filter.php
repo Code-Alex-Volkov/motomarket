@@ -7,7 +7,7 @@ function alex_filter_function(){
 	$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$args = array(
 		'post_type'     	=> 'product',
-		'posts_per_page' 	=> 4, // Выводит 18 товаров на страницу
+		'posts_per_page' 	=> 12, // Выводит 12 товаров на страницу
 		'paged'				=> $current_page,
 		'orderby' 			=> 'date', // Сортировка товаров по дате
 		'order'	 			=> 'DESC', // ASC or DESC
@@ -154,10 +154,10 @@ function alex_filter_function(){
 								$('#true_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
 							}
 							
-							if( prLength < 4 ) {
+							if( prLength < 12 ) {
 								$('.number-span').text(parseInt(numberSpan) + prLength);
 							} else {
-								$('.number-span').text(parseInt(numberSpan) + 4);
+								$('.number-span').text(parseInt(numberSpan) + 12);
 							}
 						}
 					});

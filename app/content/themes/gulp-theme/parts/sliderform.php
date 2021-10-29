@@ -10,11 +10,29 @@ function alex_slidertabs_function(){
 		'orderby' 			=> 'date', // Сортировка товаров по дате
 		'order'	 			=> 'DESC', // ASC or DESC
 		'meta_query' => [ 
-		    'relation'=>'AND',
-		    [
-    			'key' => '_stock_status',
-    			'value' => 'instock',
-    		] 
+			'relation' => 'AND',
+			[
+				'relation'=>'AND',
+				[
+					'key' => '_stock_status',
+					'value' => 'instock',
+				]
+			],
+			[
+				'relation' => 'OR',
+				[
+					'key'     => '_price',
+					'value'   => '',
+					'type'    => 'numeric',
+					'compare' => '!='
+				],
+				[
+					'key'     => '_price',
+					'value'   => 0,
+					'type'    => 'numeric',
+					'compare' => '!='
+				]
+			]
 		],
 	);
 	
@@ -34,16 +52,7 @@ function alex_slidertabs_function(){
 		endwhile;
 	endif;
 	wp_reset_query();
-?>
-<script>
-	jQuery(function () {
-		$('.product-type-simple .add_to_cart_button').on("click", function () {
-			$(this).parents('.product').find('.count-ok').fadeIn(700, function() {
-				$(this).parents('.product').find('.count-ok').fadeOut();
-			});
-		});
-	});
-</script>
-<?php
+
 	die();
-}
+} 
+?>

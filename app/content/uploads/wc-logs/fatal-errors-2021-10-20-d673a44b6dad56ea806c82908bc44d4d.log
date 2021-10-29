@@ -1,0 +1,6 @@
+2021-10-20T14:00:53+00:00 CRITICAL syntax error, unexpected 'var' (T_VAR), expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\front-page.php на строке 113
+
+2021-10-20T14:00:54+00:00 CRITICAL syntax error, unexpected 'var' (T_VAR), expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\front-page.php на строке 113
+
+2021-10-20T14:26:30+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в E:\OSPanel\domains\motomarket.loc\app\content\themes\gulp-theme\woocommerce\single-product.php на строке 49
+

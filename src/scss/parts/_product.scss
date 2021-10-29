@@ -27,6 +27,12 @@
 		height: 360px;
 		background-color: #fff;
 		position: relative;
+		> img {
+			width: 290px;
+			height: 300px;
+			object-fit: contain;
+			object-position: center;
+		}
 		.onsale {
 			position: absolute;
 			right: 20px;

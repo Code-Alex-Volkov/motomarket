@@ -1,5 +1,6 @@
 .slider-box {
 	.slider-header {
+		margin-bottom: 30px;
 		.slick-dots {
 			bottom: 20px;
 			li {
@@ -33,16 +34,16 @@
 					box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
 					display: inline-block;
 					padding: 30px 30px 60px 30px;
-					transform: skew(-25deg, 0);
+					transform: skew(-20deg, 0);
 					margin-top: 76px;
 					margin-left: 65px;
 					span {
 						font-size: 32px;
 						line-height: 150%;
-						@include fontBoldItalic();
-						letter-spacing: 0.1em;
+						@include fontBold();
+						letter-spacing: 0.04em;
 						color: #FFFFFF;
-						transform: skew(25deg, 0);
+						transform: skew(20deg, 0);
 					}
 				}
 				.action-time {
@@ -53,19 +54,19 @@
 					position: relative;
 					display: inline-block;
 					span {
-						font-size: 23px;
+						font-size: 32px;
 						line-height: 34px;
-						@include fontBoldItalic();
+						@include fontBold();
 						letter-spacing: 0.04em;
 						font-weight: 700;
 						text-transform: uppercase;
 						color: #323534;
-						transform: skew(25deg, 0);
+						transform: skew(20deg, 0);
 						position: relative;
 						width: 100%;
 						height: 85px;
 						background-color: #F89336;
-						padding: 30px 70px 30px 170px;
+						padding: 25px 70px 25px 170px;
 						&:before {
 							content: '';
 							display: inline-block;

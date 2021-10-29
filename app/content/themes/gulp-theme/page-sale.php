@@ -10,7 +10,7 @@
 			'post_type'     	  	=> 'product',
 			'paged'           	=> $current_page,
 			'order'           	=> 'DESC',
-			'posts_per_page'		=> 4,
+			'posts_per_page'		=> 12,
 			'meta_query' => [ 
 				[
 					'key' 		=> '_stock_status',
@@ -75,7 +75,11 @@
 			</ul>
 		</div>
 		<div class="right">
-			<div class="count-box">Показано 1- <span class="number-span"> 4</span> из <?php echo $wp_query->found_posts; ?> результатов</div>
+			<?php if($wp_query->found_posts == 0) { ?>
+				<div class="count-box">Товаров не найдено</div>
+			<?php } else { ?>
+				<div class="count-box">Показано 1- <span class="number-span"><?php if( $wp_query->found_posts < 12 ) { echo $wp_query->found_posts; } else { echo ' 12'; } ?></span> из <?php echo $wp_query->found_posts; ?> результатов</div>
+			<?php } ?>
 		</div>
 
 		<!-- input value используется в filter.php -->
@@ -98,9 +102,9 @@
 			<?php //wp_reset_query(); ?>
 
 			<?php 
-				// echo '<pre style="color:#fff;font-size:13px;line-height:15px;border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
-				// print_r($args);
-				// echo '</pre>'; 	
+				echo '<pre style="color:#fff;font-size:13px;line-height:15px;border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
+				print_r($args);
+				echo '</pre>'; 	
 			?>
 
 			<?php if (  $wp_query->max_num_pages > 1 ) : ?>

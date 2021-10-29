@@ -152,19 +152,19 @@ $(function () {
 		$(".slider > .thumb.right").css('right', (100 - percent) + "%");
 		$(".slider > .range").css('right', (100 - percent) + "%");
 	}
-	setRightValue();
+	setRightValue(); 
 
 	$("#input-left").bind("input", setLeftValue);
 	$("#input-right").bind("input", setRightValue);
 
 	$('.input-submit').on('click', function () {
 		$('#catalogfilter').submit();
-		$('.number-span').text(3);
+		$('.number-span').text(12);
 	});
 
 	$('.input-sale').on('click', function () {
 		$('#salefilter').submit();
-		$('.number-span').text(4);
+		$('.number-span').text(12);
 	});
 
 	// Обработка фильтра
@@ -254,10 +254,10 @@ $(function () {
 					$('#true_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
 				}
 
-				if (prLength < 4) {
+				if (prLength < 12) {
 					$('.number-span').text(parseInt(numberSpan) + prLength);
 				} else {
-					$('.number-span').text(parseInt(numberSpan) + 4);
+					$('.number-span').text(parseInt(numberSpan) + 12);
 				}
 			}
 		});
@@ -287,10 +287,10 @@ $(function () {
 				} else {
 					$('#catalog_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
 				}
-				if (prLength < 3) {
+				if (prLength < 12) {
 					$('.number-span').text(parseInt(numberSpan) + prLength);
 				} else {
-					$('.number-span').text(parseInt(numberSpan) + 3);
+					$('.number-span').text(parseInt(numberSpan) + 12);
 				}
 			}
 		});
@@ -347,17 +347,16 @@ $(function () {
 		$('.popup').fadeOut(300);
 	});
 
-	$(document).on('click', function (event) {
-		if (!$(event.target).closest(".popup-open, .popup-open-feedback, .popup-content").length) {
-			$("body").find(".popup").fadeOut(400);
-			$("body").removeClass("overhidden");
-		}
-	});
+	// $(document).on('click', function (event) {
+	// 	if (!$(event.target).closest(".popup-open, .popup-open-feedback, .popup-content").length) {
+	// 		$("body").find(".popup").fadeOut(400);
+	// 		$("body").removeClass("overhidden");
+	// 	}
+	// });
 
 	function getSliderSettings() {
 		return {
 			autoplay: true,
-			autoplaySpeed: 700000000,
 			dots: true,
 			infinite: true,
 			slidesToShow: 2,
@@ -397,8 +396,12 @@ $(function () {
 					$('.slider-tab').slick('unslick');
 					$('#response').html(data);
 					$('.slider-tab').not('.slick-initialized').slick(getSliderSettings());
+					$('.product-type-simple .add_to_cart_button').on("click", function () {
+					$(this).parents('.product').find('.count-ok').fadeIn(700, function() {
+						$(this).parents('.product').find('.count-ok').fadeOut();
+					});
+				});
 				}, 300);
-
 			}
 		});
 		return false;

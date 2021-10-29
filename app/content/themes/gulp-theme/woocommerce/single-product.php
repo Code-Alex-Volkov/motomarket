@@ -33,8 +33,8 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 
-	<?php 
-		$terms = get_the_terms( $post->cat_ID , 'product_cat' );
+<?php 
+		$terms = get_the_terms( $post->ID , 'product_cat' );
 		
 		$parentID = $terms[key($terms)]->parent;
 		$catName = get_the_category_by_ID( $parentID );
@@ -42,6 +42,9 @@ get_header( 'shop' ); ?>
 		$catSlug = $term->slug;
 		$subCatName = $terms[key($terms)]->name;
 		$subCatSlug = $terms[key($terms)]->slug;
+		echo '<pre style="color:#fff;font-size:13px;line-height:15px;border:1px solid red;padding:20px;background-color: #000;margin:10px;">';
+		print_r($terms);
+	   echo '</pre>'; 		
 	?>
 
 	<div class="main-condition">

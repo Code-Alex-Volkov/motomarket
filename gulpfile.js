@@ -2,7 +2,7 @@ const { src, dest, parallel, watch } = require('gulp');
 const browserSync   = require('browser-sync').create();
 const concat        = require('gulp-concat');
 const uglify        = require('gulp-uglify');
-const sass          = require('gulp-sass');
+const sass          = require('gulp-sass'); 
 const prefix        = require('gulp-autoprefixer');
 const cleanCSS      = require('gulp-clean-css');
 const imagemin      = require('gulp-imagemin');
@@ -18,7 +18,7 @@ function browsersync() {
     browserSync.init({ // Инициализация Browsersync
         proxy: siteUrl,
         notify: false, // Отключаем уведомления
-        online: false // Режим работы: true или false
+        online: true // Режим работы: true или false
     })
 }
 
@@ -57,8 +57,7 @@ function startwatch() {
     watch(['src/js/*.js', '!app/content/themes/gulp-theme/assets/*.min.js'], scripts);
     watch([imgPath + '**/*'], images);
     watch('app/content/themes/**/*.css').on('change', browserSync.reload);
-    watch('app/content/themes/**/*.php').on('change', browserSync.reload);
-    
+    watch('app/content/themes/**/*.php').on('change', browserSync.reload);  
 }
 
 exports.styles = styles;

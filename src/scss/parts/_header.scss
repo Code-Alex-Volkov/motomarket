@@ -353,15 +353,15 @@
 			.item-sub-menu {
 				background-color: #fff;
 				box-sizing: border-box;
-				padding: 0px;
+				padding: 0px 20px;
 				display: grid;
 				grid-template-columns: 280px 280px;
 				grid-column-gap: 20px;
 				z-index: 100;
 				position: absolute;
-				margin-top: 0px;
+				margin-top: 21px;
 				height: 0;
-				width: 0;
+				width: auto;
 				overflow: hidden;
 				transition: $transition;
 				.menu-item-sub {

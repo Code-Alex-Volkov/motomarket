@@ -59,8 +59,19 @@
 					
 					<ul class="nav">
 
-						<li class="tab-item active"><label><input class="input-submit" type="radio" name="equipment" value="motoshlemy" /><span>Мотошлемы</span></label></li>
-						<li class="tab-item"><label><input class="input-submit" type="radio" name="equipment" value="ochki" /><span>Очки</span></label></li>
+						<li class="tab-item active">
+							<label>
+								<input class="input-submit" type="radio" name="equipment" value="motoshlemy" />
+								<span>Мотошлемы</span>
+							</label>
+						</li>
+						<li class="tab-item">
+							<label>
+								<input class="input-submit" type="radio" name="equipment" value="ochki" />
+								<span>Очки</span>
+							</label>
+						</li>
+
 						<li class="tab-item"><label><input class="input-submit" type="radio" name="equipment" value="motokurtki" /><span>Мотокуртки</span></label></li>
 						<li class="tab-item"><label><input class="input-submit" type="radio" name="equipment" value="dzhersi" /><span>Джерси</span></label></li>
 						<li class="tab-item"><label><input class="input-submit" type="radio" name="equipment" value="perchatki" /><span>Перчатки</span></label></li>
@@ -112,6 +123,7 @@
 					?>
 					<?php wp_reset_query(); ?>
 				</div>
+				
 			</div>
 
 		</div>
